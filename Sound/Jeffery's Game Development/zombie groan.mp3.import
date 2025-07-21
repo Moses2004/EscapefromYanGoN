@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dj1ykegbwdraj"
+path="res://.godot/imported/zombie groan.mp3-b942866e379f8ce4e914db2c0038a5b6.mp3str"
+
+[deps]
+
+source_file="res://Sound/Jeffery's Game Development/zombie groan.mp3"
+dest_files=["res://.godot/imported/zombie groan.mp3-b942866e379f8ce4e914db2c0038a5b6.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

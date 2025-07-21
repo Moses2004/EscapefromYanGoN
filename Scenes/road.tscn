@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://2g5ntc3c57pv"]
+
+[ext_resource type="Texture2D" uid="uid://cp6el1eu3j6yn" path="res://Sprites/photo_2025-07-10_23-37-08-removebg-preview.png" id="1_s5bdx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s5bdx"]
+size = Vector2(2310.5, 90)
+
+[node name="Road" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-2, 444)
+scale = Vector2(3.246, 0.571)
+texture = ExtResource("1_s5bdx")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1152.75, 599)
+shape = SubResource("RectangleShape2D_s5bdx")

@@ -1,0 +1,42 @@
+[gd_scene load_steps=11 format=3 uid="uid://bctwc2iagbasi"]
+
+[ext_resource type="PackedScene" uid="uid://do3bjehsmg1on" path="res://Scenes/background.tscn" id="1_8gbba"]
+[ext_resource type="Script" uid="uid://byjckuydw87bu" path="res://Scripts/main.gd" id="1_kry3j"]
+[ext_resource type="PackedScene" uid="uid://2g5ntc3c57pv" path="res://Scenes/road.tscn" id="2_jjvhh"]
+[ext_resource type="PackedScene" uid="uid://biq6nyis38pnv" path="res://Scenes/player.tscn" id="3_kry3j"]
+[ext_resource type="Script" uid="uid://dsxj32fbvnfo8" path="res://Scripts/player.gd" id="4_jjvhh"]
+[ext_resource type="PackedScene" uid="uid://cqyobd13tklko" path="res://Scenes/zombie1.tscn" id="5_kry3j"]
+[ext_resource type="PackedScene" uid="uid://dg86kk3rq5w1b" path="res://Scenes/hud.tscn" id="6_21xkr"]
+[ext_resource type="PackedScene" uid="uid://dluitekpr1kva" path="res://Scenes/zombie2.tscn" id="7_6bp64"]
+[ext_resource type="PackedScene" uid="uid://cx1d4b2w5c8vy" path="res://Scenes/zombie3.tscn" id="9_ynf5e"]
+[ext_resource type="AudioStream" uid="uid://c7nqwhg5v2rnp" path="res://Sound/Jeffery's Game Development/background in game music.mp3" id="10_hptm8"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_kry3j")
+
+[node name="Background" parent="." instance=ExtResource("1_8gbba")]
+
+[node name="Player" parent="." instance=ExtResource("3_kry3j")]
+z_index = 1
+position = Vector2(-71, 134)
+script = ExtResource("4_jjvhh")
+
+[node name="Road" parent="." instance=ExtResource("2_jjvhh")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(578, 321)
+
+[node name="HUD" parent="." instance=ExtResource("6_21xkr")]
+
+[node name="Zombie2" parent="." instance=ExtResource("7_6bp64")]
+position = Vector2(49, 533)
+
+[node name="Zombie1" parent="." instance=ExtResource("5_kry3j")]
+position = Vector2(-6, -25)
+
+[node name="Zombie3" parent="." instance=ExtResource("9_ynf5e")]
+position = Vector2(-189, 450)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_hptm8")
+autoplay = true
