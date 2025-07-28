@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://d1v0ytohwaghy" path="res://Sprites/Zombie_3/Dead.png" id="3_03wje"]
 [ext_resource type="Texture2D" uid="uid://cg0b1sggdn3qo" path="res://Sprites/Zombie_3/Hurt.png" id="4_j2a2c"]
 [ext_resource type="Texture2D" uid="uid://c0oyg4xxgo2k8" path="res://Sprites/Zombie_3/Walk.png" id="5_6qr7q"]
-[ext_resource type="Script" uid="uid://wu6wxiwp4q3" path="res://scripts/zombie_1.gd" id="6_1yne0"]
+[ext_resource type="Script" uid="uid://wu6wxiwp4q3" path="res://Scripts/zombie_1.gd" id="6_1yne0"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_o41eu"]
 atlas = ExtResource("1_lb3kq")

@@ -1,29 +1,23 @@
 extends CharacterBody2D
 
-const move_speed = 200.0
-const GRAVITY: int = 4200
-const JUMP_SPEED: int = -1200
-var direction = Vector2.ZERO
+const GRAVITY : int = 4200
+const JUMP_SPEED : int = -1300
 
-func _process(delta):
-	var horizontal_input = Input.get_action_strength("right") - Input.get_action_strength("left")
-	velocity.y += GRAVITY * delta
-	# Add the gravity
-
-	if !is_on_floor():
-			$AnimatedSprite2D.play("jump")
-	elif horizontal_input != 0:
-			$AnimatedSprite2D.play("run")
-			$AnimatedSprite2D.flip_h = horizontal_input < 0
-	elif Input.is_action_just_pressed("jump"):
-			$AnimatedSprite2D.play("jump")
-			velocity.y = JUMP_SPEED
-	else:
-			$AnimatedSprite2D.play("idle")
-	
-	
+# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
-	direction.x = Input.get_action_strength("right") - Input.get_action_strength("left")
-	velocity.x = direction.x * move_speed
+	velocity.y += GRAVITY * delta
+	if is_on_floor():
+		if not get_parent().game_running:
+			$AnimatedSprite2D.play("idle")
+		#else:
+			if Input.is_action_pressed("jump"):
+				velocity.y = JUMP_SPEED
+				#$JumpSound.play()
+			elif Input.is_action_pressed("right"):
+				$AnimatedSprite2D.play("run")
+			#else:
+			#	$AnimatedSprite2D.play("run")
+	else:
+		$AnimatedSprite2D.play("jump")
 		
 	move_and_slide()

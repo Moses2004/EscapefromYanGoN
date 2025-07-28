@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://cqsmmol8ye633"]
+
+[ext_resource type="Script" uid="uid://c1k1hyw2bmf6k" path="res://game_manager.gd" id="1_oj352"]
+
+[node name="GameManager" type="Node"]
+script = ExtResource("1_oj352")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+offset_right = 40.0
+offset_bottom = 40.0

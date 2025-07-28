@@ -1,11 +1,11 @@
-[gd_scene load_steps=48 format=3 uid="uid://boijtyyj1jtr4"]
+[gd_scene load_steps=48 format=3 uid="uid://cgcf87lldh5jf"]
 
-[ext_resource type="Texture2D" uid="uid://xnrqou16ak03" path="res://scences/assets/Zombie_4/Attack.png" id="1_apb4q"]
-[ext_resource type="Texture2D" uid="uid://bpqxf46idb7mp" path="res://scences/assets/Zombie_4/Dead.png" id="2_y1dgw"]
-[ext_resource type="Texture2D" uid="uid://b1m4dvma0p55h" path="res://scences/assets/Zombie_4/Idle.png" id="3_hynge"]
-[ext_resource type="Texture2D" uid="uid://btfro60kfe4ki" path="res://scences/assets/Zombie_4/Hurt.png" id="3_y1dgw"]
-[ext_resource type="Texture2D" uid="uid://b32nknmjbgx2i" path="res://scences/assets/Zombie_4/Walk.png" id="4_4sn33"]
-[ext_resource type="Script" uid="uid://bkti1ebq37xsa" path="res://scripts/zombie_1.gd" id="6_ue14o"]
+[ext_resource type="Texture2D" uid="uid://xnrqou16ak03" path="res://Sprites/Zombie_4/Attack.png" id="1_apb4q"]
+[ext_resource type="Texture2D" uid="uid://bpqxf46idb7mp" path="res://Sprites/Zombie_4/Dead.png" id="2_y1dgw"]
+[ext_resource type="Texture2D" uid="uid://b1m4dvma0p55h" path="res://Sprites/Zombie_4/Idle.png" id="3_hynge"]
+[ext_resource type="Texture2D" uid="uid://btfro60kfe4ki" path="res://Sprites/Zombie_4/Hurt.png" id="3_y1dgw"]
+[ext_resource type="Texture2D" uid="uid://b32nknmjbgx2i" path="res://Sprites/Zombie_4/Walk.png" id="4_4sn33"]
+[ext_resource type="Script" uid="uid://wu6wxiwp4q3" path="res://scripts/zombie_1.gd" id="6_ue14o"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yodm7"]
 atlas = ExtResource("1_apb4q")
