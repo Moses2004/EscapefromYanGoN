@@ -1,8 +1,7 @@
 extends Node
 
-
+var coins = 0
 var score = 0
 
-func add_point():
-	score +=1
-	$CanvasLayer/Label.text = str(score)
+func _process(delta: float) -> void:
+	$"HUD/CoinsValue".text = str(coins)
