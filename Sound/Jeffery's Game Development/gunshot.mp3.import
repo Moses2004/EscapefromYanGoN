@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cm64r7w8fir2a"
+path="res://.godot/imported/gunshot.mp3-6571d3e3452ab04c55d877688afb76cb.mp3str"
+
+[deps]
+
+source_file="res://Sound/Jeffery's Game Development/gunshot.mp3"
+dest_files=["res://.godot/imported/gunshot.mp3-6571d3e3452ab04c55d877688afb76cb.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

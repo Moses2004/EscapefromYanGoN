@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://chb7ldivuqt57"
+path="res://.godot/imported/Car Crash sound.mp3-b0a4adc3550f0c06eb283ec843dbcc05.mp3str"
+
+[deps]
+
+source_file="res://Sound/Jeffery's Game Development/Car Crash sound.mp3"
+dest_files=["res://.godot/imported/Car Crash sound.mp3-b0a4adc3550f0c06eb283ec843dbcc05.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://to5ssee1lm27"
+path="res://.godot/imported/zombie bite.mp3-e786ed43a46cdba83968ce5e40cf5a98.mp3str"
+
+[deps]
+
+source_file="res://Sound/Jeffery's Game Development/zombie bite.mp3"
+dest_files=["res://.godot/imported/zombie bite.mp3-e786ed43a46cdba83968ce5e40cf5a98.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

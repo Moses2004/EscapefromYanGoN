@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c7nqwhg5v2rnp"
+path="res://.godot/imported/background in game music.mp3-5c79edfad0557edf38bb298740b95cb3.mp3str"
+
+[deps]
+
+source_file="res://Sound/Jeffery's Game Development/background in game music.mp3"
+dest_files=["res://.godot/imported/background in game music.mp3-5c79edfad0557edf38bb298740b95cb3.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
