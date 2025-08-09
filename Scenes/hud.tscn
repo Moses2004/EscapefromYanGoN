@@ -1,16 +1,65 @@
-[gd_scene load_steps=4 format=3 uid="uid://dg86kk3rq5w1b"]
+[gd_scene load_steps=11 format=3 uid="uid://dg86kk3rq5w1b"]
 
 [ext_resource type="Texture2D" uid="uid://cyq205vv4jap7" path="res://Sprites/coin_gold.png" id="1_e0onf"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_e0onf"]
 atlas = ExtResource("1_e0onf")
-region = Rect2(64, 0, 32, 32)
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fccik"]
+atlas = ExtResource("1_e0onf")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bjfho"]
+atlas = ExtResource("1_e0onf")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6fbih"]
+atlas = ExtResource("1_e0onf")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t1xeu"]
+atlas = ExtResource("1_e0onf")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_36asn"]
+atlas = ExtResource("1_e0onf")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8jye8"]
+atlas = ExtResource("1_e0onf")
+region = Rect2(96, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_43w4t"]
+atlas = ExtResource("1_e0onf")
+region = Rect2(112, 0, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_fccik"]
 animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_e0onf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fccik")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bjfho")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6fbih")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t1xeu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_36asn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8jye8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_43w4t")
 }],
 "loop": true,
 "name": &"default",
@@ -43,6 +92,8 @@ text = "
 "
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(1016, 42)
-scale = Vector2(2, 2)
+position = Vector2(1004, 36)
+scale = Vector2(3.5, 2.75)
 sprite_frames = SubResource("SpriteFrames_fccik")
+frame = 3
+frame_progress = 0.946426

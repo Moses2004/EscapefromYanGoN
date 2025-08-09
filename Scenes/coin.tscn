@@ -5,35 +5,35 @@
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jgi06"]
 atlas = ExtResource("1_2qo34")
-region = Rect2(0, 0, 32, 32)
+region = Rect2(0, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g537i"]
 atlas = ExtResource("1_2qo34")
-region = Rect2(32, 0, 32, 32)
+region = Rect2(16, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h2p6v"]
 atlas = ExtResource("1_2qo34")
-region = Rect2(64, 0, 32, 32)
+region = Rect2(32, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ffmqm"]
 atlas = ExtResource("1_2qo34")
-region = Rect2(96, 0, 32, 32)
+region = Rect2(48, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_81h6x"]
 atlas = ExtResource("1_2qo34")
-region = Rect2(128, 0, 32, 32)
+region = Rect2(64, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qbp07"]
 atlas = ExtResource("1_2qo34")
-region = Rect2(160, 0, 32, 32)
+region = Rect2(80, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2l7mo"]
 atlas = ExtResource("1_2qo34")
-region = Rect2(192, 0, 32, 32)
+region = Rect2(96, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_q30xt"]
 atlas = ExtResource("1_2qo34")
-region = Rect2(224, 0, 32, 32)
+region = Rect2(112, 0, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_7w2r2"]
 animations = [{
@@ -67,25 +67,24 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tthw5"]
-radius = 16.0
-height = 32.0
+[sub_resource type="CircleShape2D" id="CircleShape2D_jgi06"]
+radius = 27.4591
 
 [node name="Coin" type="Area2D"]
 script = ExtResource("1_jgi06")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(439, 533)
-scale = Vector2(2, 2)
+position = Vector2(402, 497)
+scale = Vector2(4.582, 4)
 sprite_frames = SubResource("SpriteFrames_7w2r2")
 animation = &"new_animation"
 autoplay = "new_animation"
-frame = 1
-frame_progress = 0.61216
+frame = 2
+frame_progress = 0.95838
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(437, 521)
-shape = SubResource("CapsuleShape2D_tthw5")
+position = Vector2(403, 500)
+shape = SubResource("CircleShape2D_jgi06")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
