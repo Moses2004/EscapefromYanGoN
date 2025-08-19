@@ -1,0 +1,67 @@
+[gd_scene load_steps=10 format=3 uid="uid://wwus2xbdd2s1"]
+
+[ext_resource type="Script" uid="uid://banfrn8caqrp6" path="res://Scripts/key.gd" id="1_udxw8"]
+[ext_resource type="Texture2D" uid="uid://cmek2h3rpxs02" path="res://Sprites/Updated Items/Updated Items/key.png" id="1_ut0wq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_udxw8"]
+atlas = ExtResource("1_ut0wq")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_brn0f"]
+atlas = ExtResource("1_ut0wq")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lc1k7"]
+atlas = ExtResource("1_ut0wq")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_58hov"]
+atlas = ExtResource("1_ut0wq")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qvjb5"]
+atlas = ExtResource("1_ut0wq")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_20akx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_udxw8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_brn0f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lc1k7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_58hov")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qvjb5")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1fooj"]
+size = Vector2(35.5, 49)
+
+[node name="Key" type="Area2D"]
+script = ExtResource("1_udxw8")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(259, 249)
+rotation = 1.22173
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_20akx")
+autoplay = "default"
+frame_progress = 0.570062
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(257.25, 249)
+shape = SubResource("RectangleShape2D_1fooj")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

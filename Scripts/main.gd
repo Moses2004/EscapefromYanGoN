@@ -1,11 +1,13 @@
 extends Node
 
-const PLAYER_START_POS := Vector2i(-71, 124)
-const CAM_START_POS := Vector2i(578, 321)
+var car = preload("res://Scenes/car.tscn")
+
+const PLAYER_START_POS := Vector2(-71, 124)  # Changed Vector2i to Vector2
+const CAM_START_POS := Vector2(578, 321)
 var score : int
 var speed : int = 4
 const START_SPEED : int = 2
-var screen_size : Vector2i
+var screen_size : Vector2
 var game_running : bool
 
 func _ready():
@@ -17,9 +19,9 @@ func new_game():
 	game_running = false
 	
 	$Player.position = PLAYER_START_POS
-	$Player.velocity = Vector2i(0, 0)
+	$Player.velocity = Vector2(0, 0)  # Changed Vector2i to Vector2
 	$Camera2D.position = CAM_START_POS
-	$Road.position = Vector2i(0, 0)
+	$Road.position = Vector2(0, 0)
 
 func _process(delta):
 	if Input.is_action_pressed("right"):

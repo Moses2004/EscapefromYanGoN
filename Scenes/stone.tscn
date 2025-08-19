@@ -1,0 +1,43 @@
+[gd_scene load_steps=4 format=3 uid="uid://u8ie151j3nxq"]
+
+[ext_resource type="Texture2D" uid="uid://cqn2qxjr5gn5o" path="res://Sprites/additional items/stone_1.png" id="1_nqvck"]
+
+[sub_resource type="GDScript" id="GDScript_nqvck"]
+script/source = "extends CharacterBody2D
+class_name car
+
+@export var spawnPoint = Vector2.ZERO
+
+const SPEED = 100
+
+#func _ready() -> void:
+	
+func hit_car(body):
+	if body.name == \"player\":  # Make sure the player's name is exactly \"Player\"
+		print(\"Collision\")
+	
+#func _physics_process(delta: float) -> void:
+	
+func get_spawn_point():
+	return spawnPoint
+"
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_uu3e6"]
+radius = 86.3481
+
+[node name="Stone" type="CharacterBody2D"]
+position = Vector2(-1, 0)
+script = SubResource("GDScript_nqvck")
+spawnPoint = Vector2(350, 150)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0, -1)
+scale = Vector2(8, 8)
+texture = ExtResource("1_nqvck")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(3, 10)
+shape = SubResource("CircleShape2D_uu3e6")

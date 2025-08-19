@@ -1,9 +1,12 @@
 extends CharacterBody2D
 
+#@onready var animated_sprite_2d: Animatedsprite2D = $Animatedsprite2D
+
 const GRAVITY : int = 3200
 const JUMP_SPEED : int = -1300
 const MOVE_SPEED : int = 2000
 # Called every frame. 'delta' is the elapsed time since the previous frame.
+
 func _physics_process(delta):
 	velocity.y += GRAVITY * delta
 	velocity.x = 0
@@ -22,6 +25,10 @@ func _physics_process(delta):
 	else:
 		$AnimatedSprite2D.play("jump")
 		
+#func _set_animation():
+	
+		
 	move_and_slide()
 	
 	print(GameManager.coins)
+	print(GameManager.key)
