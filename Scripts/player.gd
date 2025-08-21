@@ -1,9 +1,10 @@
 extends CharacterBody2D
 
+class_name player
 #@onready var animated_sprite_2d: Animatedsprite2D = $Animatedsprite2D
 
-const GRAVITY : int = 3200
-const JUMP_SPEED : int = -1300
+const GRAVITY : int = 4200
+const JUMP_SPEED : int = -1800
 const MOVE_SPEED : int = 2000
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 
