@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bti3eox77g0o"
+path="res://.godot/imported/Player grunt.mp3-f4f67185afb3ee03e6bc39a22fe7e71f.mp3str"
+
+[deps]
+
+source_file="res://main-menu/Jeffery's Game Development/Player grunt.mp3"
+dest_files=["res://.godot/imported/Player grunt.mp3-f4f67185afb3ee03e6bc39a22fe7e71f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

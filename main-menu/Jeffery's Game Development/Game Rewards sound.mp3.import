@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cx51fv6p2qo02"
+path="res://.godot/imported/Game Rewards sound.mp3-f0eb2cdff57cdaa394907a66e1bab7a9.mp3str"
+
+[deps]
+
+source_file="res://main-menu/Jeffery's Game Development/Game Rewards sound.mp3"
+dest_files=["res://.godot/imported/Game Rewards sound.mp3-f0eb2cdff57cdaa394907a66e1bab7a9.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

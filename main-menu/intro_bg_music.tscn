@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dj45w3r34oxq5"]
+
+[ext_resource type="AudioStream" uid="uid://dxj82xpjn4o7k" path="res://Jeffery's Game Development/Intro background music.mp3" id="1_xcook"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer"]
+stream = ExtResource("1_xcook")
+volume_db = -31.856
+autoplay = true
