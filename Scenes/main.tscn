@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bctwc2iagbasi"]
+[gd_scene load_steps=16 format=3 uid="uid://bctwc2iagbasi"]
 
 [ext_resource type="PackedScene" uid="uid://do3bjehsmg1on" path="res://Scenes/background.tscn" id="1_8gbba"]
 [ext_resource type="Script" uid="uid://byjckuydw87bu" path="res://Scripts/main.gd" id="1_kry3j"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://ftqm3jktrko2" path="res://Scenes/coin.tscn" id="11_d1ilt"]
 [ext_resource type="PackedScene" uid="uid://dae8yhrvl68wb" path="res://Scenes/car.tscn" id="13_fdnlq"]
 [ext_resource type="PackedScene" uid="uid://wwus2xbdd2s1" path="res://Scenes/key.tscn" id="13_jkdf5"]
+[ext_resource type="PackedScene" uid="uid://j8obqbq0ai4v" path="res://Scenes/restart.tscn" id="15_k12tt"]
 [ext_resource type="PackedScene" uid="uid://cgcf87lldh5jf" path="res://Scenes/zombie4.tscn" id="15_wsu2k"]
 
 [node name="Main" type="Node"]
@@ -110,3 +111,6 @@ position = Vector2(2152, -179)
 
 [node name="Key" parent="." instance=ExtResource("13_jkdf5")]
 position = Vector2(1751, 288)
+
+[node name="RESTART" parent="." instance=ExtResource("15_k12tt")]
+process_mode = 2

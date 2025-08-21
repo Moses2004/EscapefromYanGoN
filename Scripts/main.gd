@@ -40,11 +40,13 @@ var spawn_interval = 2.0  # You can randomize this too
 func _ready():
 	screen_size = get_window().size
 	ground_height = $Road/Sprite2D.texture.get_height()
+	$RESTART/VBoxContainer/Button.pressed.connect(new_game)
 	new_game()
 
 func new_game():
 	score = 0
 	game_running = false
+	get_tree().paused = false
 	difficulty = 0
 	
 	
@@ -52,6 +54,8 @@ func new_game():
 	$Player.velocity = Vector2(0, 0)  # Changed Vector2i to Vector2
 	$Camera2D.position = CAM_START_POS
 	$Road.position = Vector2(0, 0)
+	
+	$RESTART.hide()
 
 func _process(delta):
 	if Input.is_action_pressed("right"):
@@ -150,3 +154,4 @@ func adjust_difficulty():
 func game_over():
 	get_tree().paused = true
 	game_running = false
+	$RESTART.show()
