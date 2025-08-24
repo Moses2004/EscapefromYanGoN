@@ -25,11 +25,11 @@ z_index = 1
 position = Vector2(-71, 168)
 script = ExtResource("4_jjvhh")
 
+[node name="Road" parent="." instance=ExtResource("2_jjvhh")]
+position = Vector2(-47, 85)
+
 [node name="CAR" parent="." instance=ExtResource("13_fdnlq")]
 position = Vector2(1616, 22)
-
-[node name="Road" parent="." instance=ExtResource("2_jjvhh")]
-position = Vector2(-1, 18)
 
 [node name="HUD" parent="." instance=ExtResource("6_21xkr")]
 

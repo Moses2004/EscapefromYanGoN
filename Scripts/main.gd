@@ -8,6 +8,7 @@ var stone_scene = preload("res://Scenes/stone.tscn")
 var burger_scene = preload("res://Scenes/burger.tscn")
 var obstacle_types := [rock_scene, stone_scene, burger_scene]
 var obstacles : Array
+var last_obs : Node2D = null
 
 
 const PLAYER_START_POS := Vector2(-71, 124)  # Changed Vector2i to Vector2
@@ -22,7 +23,6 @@ const SPEED_MODIFIER : int = 5000
 var screen_size : Vector2i
 var ground_height : int 
 var game_running : bool
-var last_obs
 
 var zombie1_scene = preload("res://Scenes/zombie1.tscn")
 var zombie2_scene = preload("res://Scenes/zombie2.tscn")
@@ -64,8 +64,8 @@ func _process(delta):
 		if speed > MAX_SPEED:
 			speed = MAX_SPEED
 		
-		$Player.position.x += speed
-		$Camera2D.position.x += speed
+		$Player.position.x += speed 
+		$Camera2D.position.x += speed 
 		score += speed
 		
 		generate_obs()
@@ -77,8 +77,7 @@ func _process(delta):
 		for obs in obstacles:
 			if obs.position.x < ($Camera2D.position.x - screen_size.x):
 				remove_obs(obs)
-		
-			
+
 			# 🔁 Zombie spawn logic (runs when game is running)
 		time_since_last_spawn += delta
 		if time_since_last_spawn >= spawn_interval:
@@ -86,6 +85,7 @@ func _process(delta):
 			time_since_last_spawn = 0.0
 			# Optional: randomize interval slightly
 			spawn_interval = randf_range(1.5, 3.0)
+		
 
 	show_score()
 	
@@ -104,12 +104,10 @@ func generate_obs():
 			# ✅ Use ground position, not screen_size
 			var ground_y = $Road.position.y
 			var obs_y : int = ground_y + (obs_height * obs_scale.y / 2) + 500
+			
 			last_obs = obs
 			add_obs(obs, obs_x, obs_y)
 
-
-	
-		
 func add_obs(obs, x, y):
 	obs.position = Vector2i(x, y)
 	obs.body_entered.connect(hit_obs)
@@ -142,7 +140,8 @@ func spawn_zombie():
 	
 	add_child(zombie)
 
-func adjust_difficulty():
+func spawn_coin_cluster():
+	var count = randi_range(4, 8)
 	difficulty = score / SPEED_MODIFIER
 	if difficulty > MAX_DIFFICULTY:
 		difficulty = MAX_DIFFICULTY
