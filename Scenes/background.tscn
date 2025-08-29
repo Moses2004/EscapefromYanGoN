@@ -1,98 +1,126 @@
-[gd_scene load_steps=5 format=3 uid="uid://do3bjehsmg1on"]
+[gd_scene load_steps=9 format=3 uid="uid://do3bjehsmg1on"]
 
-[ext_resource type="Texture2D" uid="uid://dwwjf85iitysn" path="res://Sprites/yangon gp2.png" id="1_4aqey"]
-[ext_resource type="Texture2D" uid="uid://djak4gf303ey3" path="res://Sprites/shwedagon-removebg-preview.png" id="2_4aqey"]
+[ext_resource type="Texture2D" uid="uid://s5buxbce4kin" path="res://Sprites/layer1.png" id="1_sn1xx"]
+[ext_resource type="Texture2D" uid="uid://bgg0wvie086yy" path="res://Sprites/layer3.jpg" id="2_4aqey"]
 [ext_resource type="Texture2D" uid="uid://8py350sv0vg2" path="res://Sprites/yangon gp.png" id="3_ltlj5"]
-[ext_resource type="Texture2D" uid="uid://dgcp1uyylxn0n" path="res://Sprites/zombie_city-removebg-preview.png" id="4_xgxeb"]
+[ext_resource type="Texture2D" uid="uid://bi8242ckd5fer" path="res://Sprites/layer 2.png" id="3_xgxeb"]
+[ext_resource type="Texture2D" uid="uid://dxp3exesc8pbi" path="res://Sprites/big building.png" id="4_kopta"]
+[ext_resource type="Texture2D" uid="uid://x8ue80csiwa1" path="res://Sprites/l1.png" id="4_xgxeb"]
+[ext_resource type="Texture2D" uid="uid://b3a38e56oqdts" path="res://Sprites/pagoda.png" id="5_wi0l6"]
+[ext_resource type="Texture2D" uid="uid://b4l1lli0a5tln" path="res://Sprites/building layer 2.png" id="6_b4xn0"]
 
 [node name="Background" type="ParallaxBackground"]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(8, -71)
+[node name="bg" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(5010, 0)
 
-[node name="Clouds" type="ParallaxLayer" parent="."]
-position = Vector2(8, -71)
-motion_scale = Vector2(1.4, 2)
-motion_mirroring = Vector2(1015, 0)
+[node name="Layer1" type="Sprite2D" parent="bg"]
+position = Vector2(622.5, 323)
+scale = Vector2(0.822266, 0.652344)
+texture = ExtResource("1_sn1xx")
 
-[node name="Sprite2D" type="Sprite2D" parent="Clouds"]
-position = Vector2(-6, -4)
-scale = Vector2(0.801251, 0.630859)
-texture = ExtResource("1_4aqey")
-centered = false
+[node name="Layer2" type="Sprite2D" parent="bg"]
+position = Vector2(1890, 324)
+scale = Vector2(0.829427, 0.652344)
+texture = ExtResource("3_xgxeb")
 
-[node name="Clouds2" type="ParallaxLayer" parent="."]
-position = Vector2(8, -71)
-motion_scale = Vector2(1.4, 2)
-motion_mirroring = Vector2(1015, 0)
-
-[node name="Sprite2D" type="Sprite2D" parent="Clouds2"]
-position = Vector2(2158, 5)
-scale = Vector2(0.801251, 0.630859)
-texture = ExtResource("1_4aqey")
-centered = false
-
-[node name="Clouds3" type="ParallaxLayer" parent="."]
-position = Vector2(8, -71)
-motion_scale = Vector2(1.4, 2)
-motion_mirroring = Vector2(1015, 0)
-
-[node name="Sprite2D" type="Sprite2D" parent="Clouds3"]
-position = Vector2(4319, 1)
-scale = Vector2(0.801251, 0.630859)
-texture = ExtResource("1_4aqey")
-centered = false
-
-[node name="Pagoda" type="ParallaxLayer" parent="."]
-position = Vector2(8, -71)
-motion_scale = Vector2(0.9, 1.125)
-
-[node name="Sprite2D" type="Sprite2D" parent="Pagoda"]
-texture_filter = 1
-position = Vector2(2172.23, 6)
-scale = Vector2(3.84998, 3.03126)
+[node name="Layer3" type="Sprite2D" parent="bg"]
+position = Vector2(3131, 323)
+scale = Vector2(0.95, 0.784291)
 texture = ExtResource("2_4aqey")
-centered = false
+flip_h = true
 
-[node name="ZombieCity1" type="ParallaxLayer" parent="."]
-position = Vector2(8, -71)
-motion_scale = Vector2(1.2, 1.333)
+[node name="Layer4" type="Sprite2D" parent="bg"]
+position = Vector2(4374, 323)
+scale = Vector2(0.829427, 0.652344)
+texture = ExtResource("3_xgxeb")
 
-[node name="Sprite2D" type="Sprite2D" parent="ZombieCity1"]
-position = Vector2(-4, 335)
-scale = Vector2(1.72239, 1.3424)
-texture = ExtResource("4_xgxeb")
-centered = false
+[node name="Layer5" type="Sprite2D" parent="bg"]
+position = Vector2(5631, 324)
+scale = Vector2(0.821289, 0.661133)
+texture = ExtResource("1_sn1xx")
 
-[node name="shorthouses" type="ParallaxLayer" parent="."]
-position = Vector2(8, -71)
-motion_scale = Vector2(1.1, 1.222)
-motion_mirroring = Vector2(1030, 0)
+[node name="seperate" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(5010, 0)
 
-[node name="Sprite2D" type="Sprite2D" parent="shorthouses"]
-position = Vector2(0.000244141, 372)
-scale = Vector2(0.798471, 0.53507)
+[node name="BigBuilding" type="Sprite2D" parent="seperate"]
+position = Vector2(1236, 298)
+texture = ExtResource("4_kopta")
+
+[node name="Pagoda" type="Sprite2D" parent="seperate"]
+position = Vector2(2527.72, 294.82)
+scale = Vector2(1.12038, 0.862792)
+texture = ExtResource("5_wi0l6")
+
+[node name="BigBuilding2" type="Sprite2D" parent="seperate"]
+position = Vector2(3719, 321)
+scale = Vector2(1.06557, 1.06502)
+texture = ExtResource("4_kopta")
+
+[node name="BigBuilding3" type="Sprite2D" parent="seperate"]
+position = Vector2(5018, 311)
+scale = Vector2(1.06557, 1.06502)
+texture = ExtResource("4_kopta")
+
+[node name="additional layer" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(5000, 0)
+
+[node name="BuildingLayer4" type="Sprite2D" parent="additional layer"]
+position = Vector2(1820.38, 465.234)
+scale = Vector2(0.565918, 0.433006)
+texture = ExtResource("6_b4xn0")
+
+[node name="BuildingLayer2" type="Sprite2D" parent="additional layer"]
+position = Vector2(1887.06, 489.969)
+scale = Vector2(0.476481, 0.368757)
+texture = ExtResource("6_b4xn0")
+flip_h = true
+
+[node name="YangonGp" type="Sprite2D" parent="additional layer"]
+texture_filter = 1
+position = Vector2(2963, 466.063)
+scale = Vector2(0.38082, 0.669589)
 texture = ExtResource("3_ltlj5")
-centered = false
 
-[node name="Houses2" type="ParallaxLayer" parent="."]
-position = Vector2(8, -71)
-motion_scale = Vector2(1, 1.111)
-motion_mirroring = Vector2(1015, 0)
-
-[node name="Sprite2D" type="Sprite2D" parent="Houses2"]
-position = Vector2(2164, 333)
-scale = Vector2(0.801251, 0.630859)
+[node name="YangonGp3" type="Sprite2D" parent="additional layer"]
+texture_filter = 1
+position = Vector2(3494, 439.063)
+scale = Vector2(0.38082, 0.713677)
 texture = ExtResource("3_ltlj5")
-centered = false
 
-[node name="ZombieCity" type="ParallaxLayer" parent="."]
-position = Vector2(8, -71)
-motion_scale = Vector2(1, 1.111)
-motion_mirroring = Vector2(1015, 0)
+[node name="BuildingLayer3" type="Sprite2D" parent="additional layer"]
+position = Vector2(4390.75, 409.469)
+scale = Vector2(0.633138, 0.5389)
+texture = ExtResource("6_b4xn0")
 
-[node name="Sprite2D" type="Sprite2D" parent="ZombieCity"]
-position = Vector2(4324.99, 368)
-scale = Vector2(1.69887, 1.33759)
+[node name="YangonGp4" type="Sprite2D" parent="additional layer"]
+texture_filter = 1
+position = Vector2(4153.5, 421.5)
+scale = Vector2(0.584433, 0.923848)
+texture = ExtResource("3_ltlj5")
+
+[node name="YangonGp2" type="Sprite2D" parent="additional layer"]
+texture_filter = 1
+position = Vector2(5102.75, 428.25)
+scale = Vector2(0.739055, 0.90481)
+texture = ExtResource("3_ltlj5")
+
+[node name="L4" type="Sprite2D" parent="additional layer"]
+position = Vector2(491, 571)
+scale = Vector2(0.752344, 0.666967)
 texture = ExtResource("4_xgxeb")
-centered = false
+
+[node name="L1" type="Sprite2D" parent="additional layer"]
+position = Vector2(1409.5, 564.375)
+scale = Vector2(0.752344, 0.666967)
+texture = ExtResource("4_xgxeb")
+
+[node name="L2" type="Sprite2D" parent="additional layer"]
+position = Vector2(2207, 583)
+scale = Vector2(0.496484, 0.52482)
+texture = ExtResource("4_xgxeb")
+
+[node name="L3" type="Sprite2D" parent="additional layer"]
+position = Vector2(3128, 591)
+scale = Vector2(0.954297, 0.473601)
+texture = ExtResource("4_xgxeb")
