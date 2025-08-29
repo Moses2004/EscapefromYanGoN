@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://b5y02cd48t7dv" path="res://main-menu/Background.png" id="1_7vrkn"]
 [ext_resource type="Script" uid="uid://dhy8n82k54yed" path="res://main-menu/main_menu.gd" id="1_fu7sn"]
 [ext_resource type="FontFile" uid="uid://bbjbp5hborrr5" path="res://main-menu/shlop rg.otf" id="2_fu7sn"]
-[ext_resource type="AudioStream" uid="uid://co5thnmp4vadf" path="res://main-menu/Jeffery's Game Development/Button click.mp3" id="4_jix8l"]
+[ext_resource type="AudioStream" uid="uid://co5thnmp4vadf" path="res://Sound/Jeffery's Game Development/Button click.mp3" id="4_jix8l"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jix8l"]
 texture = ExtResource("1_7vrkn")

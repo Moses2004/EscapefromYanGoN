@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 var speed := 300
 var screen_width : int = 1000
+var game_running :  bool
 
 func _ready() -> void:
 	# Try to find the Hitbox node first
@@ -21,4 +22,9 @@ func _physics_process(delta: float) -> void:
 
 func _on_hitbox_body_entered(body: Node) -> void:
 	if body.name == "Player":
-		print("Collision")
+		game_over()
+		
+func game_over():
+	get_tree().paused = true
+	game_running = false
+	$RESTART.show()
