@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c0ty1jh6iub56"
+path="res://.godot/imported/Open gate sound.mp3-68de872f1d1f7a12d575e4049d7c239f.mp3str"
+
+[deps]
+
+source_file="res://main-menu/Jeffery's Game Development/Open gate sound.mp3"
+dest_files=["res://.godot/imported/Open gate sound.mp3-68de872f1d1f7a12d575e4049d7c239f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

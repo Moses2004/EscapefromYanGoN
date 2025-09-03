@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://de6w4k0iuyn82"
+path="res://.godot/imported/punch sound.mp3-edb492ce05481316e167545e7e0de464.mp3str"
+
+[deps]
+
+source_file="res://main-menu/Jeffery's Game Development/punch sound.mp3"
+dest_files=["res://.godot/imported/punch sound.mp3-edb492ce05481316e167545e7e0de464.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

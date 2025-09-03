@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ciqusv1h3ac0r"
+path="res://.godot/imported/Player dead sound.mp3-1870356a8b3b4c7e610b7caf1820c9bc.mp3str"
+
+[deps]
+
+source_file="res://main-menu/Jeffery's Game Development/Player dead sound.mp3"
+dest_files=["res://.godot/imported/Player dead sound.mp3-1870356a8b3b4c7e610b7caf1820c9bc.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

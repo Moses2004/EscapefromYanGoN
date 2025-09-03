@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cm3ba8rhjyl4c"
+path="res://.godot/imported/Buy Item sound.mp3-55651bd72ae4d5549b276fe3c8c51c6a.mp3str"
+
+[deps]
+
+source_file="res://main-menu/Jeffery's Game Development/Buy Item sound.mp3"
+dest_files=["res://.godot/imported/Buy Item sound.mp3-55651bd72ae4d5549b276fe3c8c51c6a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

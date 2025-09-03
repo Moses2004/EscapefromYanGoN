@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://s101f0buun54"
+path="res://.godot/imported/Coin sound.mp3-2e1eda4fdf74e3547932cc53e858cb0b.mp3str"
+
+[deps]
+
+source_file="res://main-menu/Jeffery's Game Development/Coin sound.mp3"
+dest_files=["res://.godot/imported/Coin sound.mp3-2e1eda4fdf74e3547932cc53e858cb0b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
