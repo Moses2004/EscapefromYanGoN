@@ -1,5 +1,8 @@
 extends Node
 
+@onready var animated_sprite = $Player/AnimatedSprite2D
+@onready var coins
+
 #var car = preload("res://Scenes/car.tscn")
 
 #preload obstacles
@@ -44,6 +47,7 @@ func _ready():
 
 func new_game():
 	score = 0
+	coins = 0
 	game_running = false
 	difficulty = 0
 	
@@ -123,7 +127,7 @@ func hit_obs(body):
 		game_over()
 
 func show_score():
-	$HUD.get_node("ScoreLabel").text = "SCORE: " + str(score)
+	$HUD/NinePatchRect.get_node("ScoreLabel").text = "SCORE: " + str(score)
 	
 func spawn_zombie():
 	var zombie_scene = zombie_types[randi() % zombie_types.size()]
@@ -147,5 +151,9 @@ func spawn_coin_cluster():
 		difficulty = MAX_DIFFICULTY
 		
 func game_over():
-	get_tree().paused = true
-	game_running = false
+	if animated_sprite:
+		animated_sprite.play("dead")
+		get_tree().paused = true
+		game_running = false
+	else:
+		print("Error: AnimatedSprite2D is null!")

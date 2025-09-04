@@ -1,8 +1,10 @@
 extends Node
 
-var coins = 0
-var key = 0
-var score = 0
+var coins: int = 0
+var key: int = 0
+var score: int = 0
 
 func _process(delta: float) -> void:
-	$"HUD/CoinsValue".text = str(coins)
+	var hud = get_tree().root.get_node("HUD/CoinsValue") # adjust path!
+	if hud:
+		hud.text = str(coins)
