@@ -21,6 +21,11 @@ func _physics_process(delta):
 			elif Input.is_action_pressed("right"):
 				velocity.x = MOVE_SPEED
 				$AnimatedSprite2D.play("run")
+				$AnimatedSprite2D.flip_h = false
+			elif Input.is_action_pressed("left"):
+				velocity.x = -MOVE_SPEED/10
+				$AnimatedSprite2D.play("run")
+				$AnimatedSprite2D.flip_h = true
 			#else:
 			#	$AnimatedSprite2D.play("run")
 	else:

@@ -1,0 +1,104 @@
+[gd_scene load_steps=9 format=3 uid="uid://dpcx2uqd1ke15"]
+
+[ext_resource type="Texture2D" uid="uid://b5y02cd48t7dv" path="res://main-menu/Background.png" id="1_ttvwi"]
+[ext_resource type="FontFile" uid="uid://bbjbp5hborrr5" path="res://main-menu/shlop rg.otf" id="2_12nsu"]
+[ext_resource type="AudioStream" uid="uid://co5thnmp4vadf" path="res://Sound/Jeffery's Game Development/Button click.mp3" id="3_xmjwj"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hpwn5"]
+texture = ExtResource("1_ttvwi")
+modulate_color = Color(0.646029, 0.646029, 0.646029, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_d4x15"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7hi4k"]
+bg_color = Color(0.800491, 0.800491, 0.800491, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0, 0, 0, 0.203922)
+shadow_size = 5
+shadow_offset = Vector2(0, 3.41)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p630i"]
+bg_color = Color(0.581033, 0.581033, 0.581033, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0, 0, 0, 0.203922)
+shadow_size = 5
+shadow_offset = Vector2(0, 3.41)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ox57f"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0, 0, 0, 0.203922)
+shadow_size = 5
+shadow_offset = Vector2(0, 3.41)
+
+[node name="RESTART" type="CanvasLayer"]
+process_mode = 2
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_hpwn5")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -187.0
+offset_top = -94.0
+offset_right = 182.0
+offset_bottom = 56.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 9
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0.917647, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_12nsu")
+theme_override_font_sizes/font_size = 46
+theme_override_styles/focus = SubResource("StyleBoxEmpty_d4x15")
+theme_override_styles/hover = SubResource("StyleBoxFlat_7hi4k")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_p630i")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ox57f")
+text = "RESTART"
+
+[node name="click button" type="AudioStreamPlayer" parent="VBoxContainer/Button"]
+stream = ExtResource("3_xmjwj")
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -256.0
+offset_top = -201.0
+offset_right = 243.0
+offset_bottom = -117.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.929412, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_y = 10
+theme_override_fonts/font = ExtResource("2_12nsu")
+theme_override_font_sizes/font_size = 76
+text = "Escape From Yangon"
+horizontal_alignment = 1

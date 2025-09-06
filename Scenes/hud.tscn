@@ -1,10 +1,12 @@
-[gd_scene load_steps=15 format=3 uid="uid://dg86kk3rq5w1b"]
+[gd_scene load_steps=30 format=3 uid="uid://dg86kk3rq5w1b"]
 
 [ext_resource type="Script" uid="uid://c1k1hyw2bmf6k" path="res://Scripts/game_manager.gd" id="1_6fbih"]
 [ext_resource type="Texture2D" uid="uid://cyq205vv4jap7" path="res://Sprites/coin_gold.png" id="1_e0onf"]
 [ext_resource type="Script" uid="uid://k1qgin6gxyuh" path="res://Scripts/hud.gd" id="1_t1xeu"]
 [ext_resource type="Texture2D" uid="uid://dbccp68uac48s" path="res://Sprites/20240707dragon9SlicesC.png" id="2_bjfho"]
 [ext_resource type="Texture2D" uid="uid://i4fv6dotypfd" path="res://Sprites/20240707dragon9SlicesD.png" id="2_fccik"]
+[ext_resource type="Texture2D" uid="uid://lwcr0tuxnd7i" path="res://Sprites/20240707dragon9SlicesE.png" id="6_8jye8"]
+[ext_resource type="Texture2D" uid="uid://ep3gkcuq6wh6" path="res://Sprites/Updated Items/Updated Items/key-blue.png" id="7_43w4t"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_e0onf"]
 atlas = ExtResource("1_e0onf")
@@ -70,6 +72,98 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_7gr8i"]
+atlas = ExtResource("7_43w4t")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ep0j"]
+atlas = ExtResource("7_43w4t")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4f5kr"]
+atlas = ExtResource("7_43w4t")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_piegi"]
+atlas = ExtResource("7_43w4t")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i2avg"]
+atlas = ExtResource("7_43w4t")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1a2va"]
+atlas = ExtResource("7_43w4t")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ssfue"]
+atlas = ExtResource("7_43w4t")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8bf2m"]
+atlas = ExtResource("7_43w4t")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ba8gd"]
+atlas = ExtResource("7_43w4t")
+region = Rect2(256, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_36s6t"]
+atlas = ExtResource("7_43w4t")
+region = Rect2(288, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pbtju"]
+atlas = ExtResource("7_43w4t")
+region = Rect2(320, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yidpd"]
+atlas = ExtResource("7_43w4t")
+region = Rect2(352, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0iicw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7gr8i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5ep0j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4f5kr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_piegi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i2avg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1a2va")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ssfue")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8bf2m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ba8gd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_36s6t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pbtju")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yidpd")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource("1_t1xeu")
 
@@ -99,7 +193,7 @@ texture = ExtResource("2_bjfho")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="NinePatchRect2"]
 position = Vector2(30, 35)
-scale = Vector2(4, 3.142)
+scale = Vector2(3.5, 2.75)
 sprite_frames = SubResource("SpriteFrames_fccik")
 autoplay = "default"
 frame_progress = 0.267191
@@ -112,13 +206,38 @@ offset_bottom = 83.0
 texture = ExtResource("2_fccik")
 
 [node name="ScoreLabel" type="Label" parent="NinePatchRect"]
-offset_left = 8.0
+layout_mode = 0
+offset_left = 2.0
 offset_top = 24.0
-offset_right = 138.0
+offset_right = 132.0
 offset_bottom = 73.0
 size_flags_horizontal = 4
 size_flags_vertical = 0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 20
-text = "SCORE: "
+text = "SCR: "
 horizontal_alignment = 1
+
+[node name="KeyPatchRect3" type="NinePatchRect" parent="."]
+offset_left = 892.0
+offset_top = 2.0
+offset_right = 1012.0
+offset_bottom = 82.0
+texture = ExtResource("6_8jye8")
+
+[node name="KeySprite" type="AnimatedSprite2D" parent="KeyPatchRect3"]
+position = Vector2(27, 33)
+scale = Vector2(1.8, 1.8)
+sprite_frames = SubResource("SpriteFrames_0iicw")
+autoplay = "default"
+frame = 7
+frame_progress = 0.588281
+
+[node name="KeyLabel" type="Label" parent="."]
+offset_left = 942.0
+offset_top = 7.0
+offset_right = 1068.0
+offset_bottom = 70.0
+theme_override_colors/font_color = Color(0.984314, 0, 0, 1)
+theme_override_font_sizes/font_size = 45
+script = ExtResource("1_6fbih")

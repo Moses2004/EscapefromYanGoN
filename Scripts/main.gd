@@ -43,12 +43,14 @@ var spawn_interval = 2.0  # You can randomize this too
 func _ready():
 	screen_size = get_window().size
 	ground_height = $Road/Sprite2D.texture.get_height()
+	$RESTART/VBoxContainer/Button.pressed.connect(new_game)
 	new_game()
 
 func new_game():
 	score = 0
 	coins = 0
 	game_running = false
+	get_tree().paused = false
 	difficulty = 0
 	
 	
@@ -56,6 +58,8 @@ func new_game():
 	$Player.velocity = Vector2(0, 0)  # Changed Vector2i to Vector2
 	$Camera2D.position = CAM_START_POS
 	$Road.position = Vector2(0, 0)
+	
+	$RESTART.hide()
 
 func _process(delta):
 	if Input.is_action_pressed("right"):
@@ -68,8 +72,8 @@ func _process(delta):
 		if speed > MAX_SPEED:
 			speed = MAX_SPEED
 		
-		$Player.position.x += speed 
-		$Camera2D.position.x += speed 
+		$Player.position.x += speed
+		$Camera2D.position.x += speed
 		score += speed
 		
 		generate_obs()
@@ -81,7 +85,8 @@ func _process(delta):
 		for obs in obstacles:
 			if obs.position.x < ($Camera2D.position.x - screen_size.x):
 				remove_obs(obs)
-
+		
+			
 			# 🔁 Zombie spawn logic (runs when game is running)
 		time_since_last_spawn += delta
 		if time_since_last_spawn >= spawn_interval:
@@ -89,7 +94,6 @@ func _process(delta):
 			time_since_last_spawn = 0.0
 			# Optional: randomize interval slightly
 			spawn_interval = randf_range(1.5, 3.0)
-		
 
 	show_score()
 	
@@ -127,7 +131,8 @@ func hit_obs(body):
 		game_over()
 
 func show_score():
-	$HUD/NinePatchRect.get_node("ScoreLabel").text = "SCORE: " + str(score)
+	$HUD/NinePatchRect.get_node("ScoreLabel").text = "SCR: " + str(score)
+	$HUD/CoinsValue.text = "0"
 	
 func spawn_zombie():
 	var zombie_scene = zombie_types[randi() % zombie_types.size()]
@@ -155,5 +160,6 @@ func game_over():
 		animated_sprite.play("dead")
 		get_tree().paused = true
 		game_running = false
+		$RESTART.show()
 	else:
 		print("Error: AnimatedSprite2D is null!")

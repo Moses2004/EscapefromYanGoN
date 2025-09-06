@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bctwc2iagbasi"]
+[gd_scene load_steps=16 format=3 uid="uid://bctwc2iagbasi"]
 
 [ext_resource type="PackedScene" uid="uid://do3bjehsmg1on" path="res://Scenes/background.tscn" id="1_8gbba"]
 [ext_resource type="Script" uid="uid://byjckuydw87bu" path="res://Scripts/main.gd" id="1_kry3j"]
@@ -9,10 +9,11 @@
 [ext_resource type="PackedScene" uid="uid://dg86kk3rq5w1b" path="res://Scenes/hud.tscn" id="6_21xkr"]
 [ext_resource type="PackedScene" uid="uid://dluitekpr1kva" path="res://Scenes/zombie2.tscn" id="7_6bp64"]
 [ext_resource type="PackedScene" uid="uid://cx1d4b2w5c8vy" path="res://Scenes/zombie3.tscn" id="9_ynf5e"]
-[ext_resource type="AudioStream" uid="uid://c7nqwhg5v2rnp" path="res://main-menu/Jeffery's Game Development/background in game music.mp3" id="10_hptm8"]
+[ext_resource type="AudioStream" uid="uid://c7nqwhg5v2rnp" path="res://Sound/Jeffery's Game Development/background in game music.mp3" id="10_hptm8"]
 [ext_resource type="PackedScene" uid="uid://ftqm3jktrko2" path="res://Scenes/coin.tscn" id="11_d1ilt"]
 [ext_resource type="PackedScene" uid="uid://dae8yhrvl68wb" path="res://Scenes/car.tscn" id="13_fdnlq"]
 [ext_resource type="PackedScene" uid="uid://wwus2xbdd2s1" path="res://Scenes/key.tscn" id="13_jkdf5"]
+[ext_resource type="PackedScene" uid="uid://dpcx2uqd1ke15" path="res://Scenes/restart.tscn" id="15_k12tt"]
 [ext_resource type="PackedScene" uid="uid://cgcf87lldh5jf" path="res://Scenes/zombie4.tscn" id="15_wsu2k"]
 
 [node name="Main" type="Node"]
@@ -109,4 +110,12 @@ position = Vector2(2206, -180)
 position = Vector2(2152, -179)
 
 [node name="Key" parent="." instance=ExtResource("13_jkdf5")]
-position = Vector2(1751, 288)
+position = Vector2(2545, 291)
+
+[node name="Key3" parent="." instance=ExtResource("13_jkdf5")]
+position = Vector2(4280, 384)
+
+[node name="Key2" parent="." instance=ExtResource("13_jkdf5")]
+position = Vector2(3367, 211)
+
+[node name="RESTART" parent="." instance=ExtResource("15_k12tt")]
