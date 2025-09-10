@@ -4,16 +4,16 @@
 [ext_resource type="Texture2D" uid="uid://cn6rcbfbvtspf" path="res://Sprites/pixel_car-removebg-preview.png" id="1_wqo35"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wqo35"]
-size = Vector2(496.5, 170)
+size = Vector2(503.25, 163)
 
 [node name="CAR" type="CharacterBody2D"]
 script = ExtResource("1_go66d")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(615, 540)
+position = Vector2(581, 535)
 scale = Vector2(0.803116, 0.803116)
 texture = ExtResource("1_wqo35")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(611, 546)
+position = Vector2(574.625, 541.5)
 shape = SubResource("RectangleShape2D_wqo35")
