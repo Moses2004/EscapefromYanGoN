@@ -1,0 +1,116 @@
+[gd_scene load_steps=5 format=3 uid="uid://b4cjwjmth6i67"]
+
+[ext_resource type="Script" uid="uid://bgetovc0rnf6n" path="res://Scenes/story_intro.gd" id="1_7oqqq"]
+[ext_resource type="FontFile" uid="uid://dhltegnxapxf5" path="res://Born2bSportyV2.ttf" id="1_pbjjb"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qb4wh"]
+bg_color = Color(0.313726, 0.313726, 0.313726, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7oqqq"]
+bg_color = Color(0.314316, 0.314316, 0.314316, 1)
+
+[node name="StoryIntro" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_7oqqq")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1113.0
+offset_bottom = 609.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0265719, 0.380609, 0.431022, 1)
+
+[node name="Title" type="Panel" parent="Background"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -196.5
+offset_top = 52.0
+offset_right = 127.5
+offset_bottom = 166.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_qb4wh")
+
+[node name="Title_label" type="Label" parent="Background/Title"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -71.5
+offset_top = -21.0
+offset_right = 71.5
+offset_bottom = 21.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_pbjjb")
+theme_override_font_sizes/font_size = 100
+text = "Story"
+horizontal_alignment = 1
+
+[node name="DialogPanel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 135.0
+offset_top = 165.0
+offset_right = 943.0
+offset_bottom = 425.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_7oqqq")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="DialogPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0445545
+anchor_top = 0.0923077
+anchor_right = 0.954696
+anchor_bottom = 0.912483
+metadata/_edit_use_anchors_ = true
+
+[node name="dialog_label" type="Label" parent="DialogPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_pbjjb")
+theme_override_font_sizes/font_size = 30
+autowrap_mode = 3
+
+[node name="button_row" type="HBoxContainer" parent="."]
+layout_mode = 2
+offset_left = 37.0
+offset_top = 539.0
+offset_right = 1109.0
+offset_bottom = 598.0
+grow_horizontal = 0
+grow_vertical = 0
+size_flags_vertical = 0
+theme_override_constants/separation = 900
+
+[node name="next_button" type="Button" parent="button_row"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_pbjjb")
+theme_override_font_sizes/font_size = 50
+text = "next"
+
+[node name="skip_button" type="Button" parent="button_row"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_pbjjb")
+theme_override_font_sizes/font_size = 50
+text = "skip"
+
+[node name="FadeRect" type="ColorRect" parent="."]
+layout_mode = 2
+offset_bottom = 8.0
+color = Color(0, 0, 0, 0.00392157)
