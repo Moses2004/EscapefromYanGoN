@@ -1,13 +1,13 @@
 [gd_scene load_steps=5 format=3 uid="uid://b4cjwjmth6i67"]
 
-[ext_resource type="Script" uid="uid://bgetovc0rnf6n" path="res://Scenes/story_intro.gd" id="1_7oqqq"]
-[ext_resource type="FontFile" uid="uid://dhltegnxapxf5" path="res://Born2bSportyV2.ttf" id="1_pbjjb"]
+[ext_resource type="Script" uid="uid://bgetovc0rnf6n" path="res://Scripts/story_intro.gd" id="1_7oqqq"]
+[ext_resource type="FontFile" uid="uid://dhltegnxapxf5" path="res://front/Born2bSportyV2.ttf" id="2_qb4wh"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qb4wh"]
-bg_color = Color(0.313726, 0.313726, 0.313726, 1)
+bg_color = Color(0.168627, 0.168627, 0.168627, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7oqqq"]
-bg_color = Color(0.314316, 0.314316, 0.314316, 1)
+bg_color = Color(0.169245, 0.169245, 0.169245, 1)
 
 [node name="StoryIntro" type="Control"]
 layout_mode = 3
@@ -25,7 +25,7 @@ offset_right = 1113.0
 offset_bottom = 609.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.0265719, 0.380609, 0.431022, 1)
+color = Color(0.26524, 0.005947, 0.00682764, 1)
 
 [node name="Title" type="Panel" parent="Background"]
 layout_mode = 1
@@ -52,7 +52,7 @@ offset_right = 71.5
 offset_bottom = 21.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_fonts/font = ExtResource("1_pbjjb")
+theme_override_fonts/font = ExtResource("2_qb4wh")
 theme_override_font_sizes/font_size = 100
 text = "Story"
 horizontal_alignment = 1
@@ -67,7 +67,7 @@ anchor_bottom = 1.0
 offset_left = 135.0
 offset_top = 165.0
 offset_right = 943.0
-offset_bottom = 425.0
+offset_bottom = 478.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_styles/panel = SubResource("StyleBoxFlat_7oqqq")
@@ -83,7 +83,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="dialog_label" type="Label" parent="DialogPanel/VBoxContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("1_pbjjb")
+theme_override_fonts/font = ExtResource("2_qb4wh")
 theme_override_font_sizes/font_size = 30
 autowrap_mode = 3
 
@@ -100,15 +100,15 @@ theme_override_constants/separation = 900
 
 [node name="next_button" type="Button" parent="button_row"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("1_pbjjb")
+theme_override_fonts/font = ExtResource("2_qb4wh")
 theme_override_font_sizes/font_size = 50
-text = "next"
+text = "Next"
 
 [node name="skip_button" type="Button" parent="button_row"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("1_pbjjb")
+theme_override_fonts/font = ExtResource("2_qb4wh")
 theme_override_font_sizes/font_size = 50
-text = "skip"
+text = "Skip"
 
 [node name="FadeRect" type="ColorRect" parent="."]
 layout_mode = 2

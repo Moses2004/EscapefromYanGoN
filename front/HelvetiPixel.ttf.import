@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://dhltegnxapxf5"
-path="res://.godot/imported/Born2bSportyV2.ttf-b5dd85a7721b302a00f8d75f2212a5f0.fontdata"
+uid="uid://cw3s3q6wkv05d"
+path="res://.godot/imported/HelvetiPixel.ttf-d9363a59aee132fc4f2ff616b32ddd16.fontdata"
 
 [deps]
 
-source_file="res://Born2bSportyV2.ttf"
-dest_files=["res://.godot/imported/Born2bSportyV2.ttf-b5dd85a7721b302a00f8d75f2212a5f0.fontdata"]
+source_file="res://front/HelvetiPixel.ttf"
+dest_files=["res://.godot/imported/HelvetiPixel.ttf-d9363a59aee132fc4f2ff616b32ddd16.fontdata"]
 
 [params]
 

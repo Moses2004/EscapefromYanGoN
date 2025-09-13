@@ -81,11 +81,11 @@ func _on_next_pressed() -> void:
 		if current_page < dialog_pages.size():
 			_page_transition_then_show(current_page)
 		else:
-			_start_game()
+			_on_skip_pressed()
 
 # === Skip button ===
 func _on_skip_pressed() -> void:
-	_start_game()
+	get_tree().change_scene_to_file("res://main-menu/interactive-map/map.tscn")
 
 # === Page transition flash ===
 func _page_transition_then_show(next_page: int) -> void:

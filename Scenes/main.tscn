@@ -50,6 +50,7 @@ visible = false
 position = Vector2(-189, 450)
 
 [node name="Zombie4" parent="." instance=ExtResource("15_wsu2k")]
+visible = false
 position = Vector2(85, -218)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
