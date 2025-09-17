@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ncjli255s4g2"
-path="res://.godot/imported/Attack.png-492c98d87b3e5ae6d95a0f47c21ab951.ctex"
+uid="uid://l424cm4nq28g"
+path="res://.godot/imported/pngegg (1).png-706b7cd5b89ee6653f3ad985f92f42e4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Zombie_3/Attack.png"
-dest_files=["res://.godot/imported/Attack.png-492c98d87b3e5ae6d95a0f47c21ab951.ctex"]
+source_file="res://Sprites/Zombie_1/pngegg (1).png"
+dest_files=["res://.godot/imported/pngegg (1).png-706b7cd5b89ee6653f3ad985f92f42e4.ctex"]
 
 [params]
 

@@ -250,7 +250,7 @@ position = Vector2(6728, -52)
 position = Vector2(2545, 291)
 
 [node name="Key3" parent="." instance=ExtResource("13_jkdf5")]
-position = Vector2(4036, 374)
+position = Vector2(4280, 384)
 
 [node name="Key2" parent="." instance=ExtResource("13_jkdf5")]
 position = Vector2(3367, 211)

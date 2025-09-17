@@ -8,8 +8,10 @@ extends Node
 #preload obstacles
 var rock_scene = preload("res://Scenes/rock.tscn")
 var stone_scene = preload("res://Scenes/stone.tscn")
-var burger_scene = preload("res://Scenes/burger.tscn")
-var obstacle_types := [rock_scene, stone_scene, burger_scene]
+var zombie1_scene = preload("res://Scenes/zombie1.tscn")
+var zombie2_scene = preload("res://Scenes/zombie2.tscn")
+var zombie3_scene = preload("res://Scenes/zombie3.tscn")
+var obstacle_types := [rock_scene, stone_scene, zombie1_scene,zombie2_scene,zombie3_scene]
 var obstacles : Array
 var last_obs : Node2D = null
 
@@ -27,13 +29,10 @@ var screen_size : Vector2i
 var ground_height : int 
 var game_running : bool
 
-var zombie1_scene = preload("res://Scenes/zombie1.tscn")
-var zombie2_scene = preload("res://Scenes/zombie2.tscn")
-var zombie3_scene = preload("res://Scenes/zombie3.tscn")
-var zombie4_scene = preload("res://Scenes/zombie4.tscn")
 
-# Array of all zombie scenes
-var zombie_types := [zombie1_scene, zombie2_scene, zombie3_scene, zombie4_scene]
+
+
+
 
 # Spawn timing
 var time_since_last_spawn = 0.0
@@ -44,7 +43,10 @@ func _ready():
 	screen_size = get_window().size
 	ground_height = $Road/Sprite2D.texture.get_height()
 	$RESTART/VBoxContainer/Button.pressed.connect(new_game)
+	
 	new_game()
+	
+	
 
 func new_game():
 	score = 0
@@ -87,14 +89,7 @@ func _process(delta):
 				remove_obs(obs)
 		
 			
-			# 🔁 Zombie spawn logic (runs when game is running)
-		time_since_last_spawn += delta
-		if time_since_last_spawn >= spawn_interval:
-			spawn_zombie()
-			time_since_last_spawn = 0.0
-			# Optional: randomize interval slightly
-			spawn_interval = randf_range(1.5, 3.0)
-
+	
 	show_score()
 	
 func generate_obs():
@@ -130,24 +125,12 @@ func hit_obs(body):
 	if body.name == "Player":
 		game_over()
 
+
 func show_score():
 	$HUD/NinePatchRect.get_node("ScoreLabel").text = "SCR: " + str(score)
 	$HUD/CoinsValue.text = "0"
 	
-func spawn_zombie():
-	var zombie_scene = zombie_types[randi() % zombie_types.size()]
-	var zombie = zombie_scene.instantiate()
 
-	#  Spawn in front of camera (offscreen right)
-	var spawn_x = $Camera2D.position.x + screen_size.x + 100
-	var spawn_y = 500  # Replace with the correct ground Y position
-	zombie.position = Vector2(spawn_x, spawn_y)
-	
-	# Add this line to scale the zombie
-	# Adjust the Vector2 values (e.g., Vector2(0.8, 0.8)) to match your player's size
-	zombie.scale = Vector2(1.8, 1.8) 
-	
-	add_child(zombie)
 
 func spawn_coin_cluster():
 	var count = randi_range(4, 8)

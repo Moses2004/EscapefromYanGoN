@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bl8xknauhxgyh"
-path="res://.godot/imported/Dead.png-8e5c6a81b6179b31d3b16f0528abd72c.ctex"
+uid="uid://djalh56t72e76"
+path="res://.godot/imported/h96p_wqom_220609.jpg-57e1c8b3955480fd0e6ad4d4aae50f01.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Zombie_2/Dead.png"
-dest_files=["res://.godot/imported/Dead.png-8e5c6a81b6179b31d3b16f0528abd72c.ctex"]
+source_file="res://Sprites/scary-zombie-cartoon-character/h96p_wqom_220609.jpg"
+dest_files=["res://.godot/imported/h96p_wqom_220609.jpg-57e1c8b3955480fd0e6ad4d4aae50f01.ctex"]
 
 [params]
 

@@ -1,16 +1,20 @@
-[gd_scene load_steps=14 format=3 uid="uid://bctwc2iagbasi"]
+[gd_scene load_steps=18 format=3 uid="uid://bctwc2iagbasi"]
 
 [ext_resource type="PackedScene" uid="uid://do3bjehsmg1on" path="res://Scenes/background.tscn" id="1_8gbba"]
 [ext_resource type="Script" uid="uid://byjckuydw87bu" path="res://Scripts/main.gd" id="1_kry3j"]
 [ext_resource type="PackedScene" uid="uid://2g5ntc3c57pv" path="res://Scenes/road.tscn" id="2_jjvhh"]
 [ext_resource type="PackedScene" uid="uid://biq6nyis38pnv" path="res://Scenes/player.tscn" id="3_kry3j"]
 [ext_resource type="Script" uid="uid://dsxj32fbvnfo8" path="res://Scripts/player.gd" id="4_jjvhh"]
+[ext_resource type="PackedScene" uid="uid://cqyobd13tklko" path="res://Scenes/zombie1.tscn" id="5_kry3j"]
 [ext_resource type="PackedScene" uid="uid://dg86kk3rq5w1b" path="res://Scenes/hud.tscn" id="6_21xkr"]
-[ext_resource type="AudioStream" uid="uid://c7nqwhg5v2rnp" path="res://Sound/Jeffery's Game Development/background in game music.mp3" id="10_hptm8"]
+[ext_resource type="PackedScene" uid="uid://dluitekpr1kva" path="res://Scenes/zombie2.tscn" id="7_6bp64"]
+[ext_resource type="PackedScene" uid="uid://cx1d4b2w5c8vy" path="res://Scenes/zombie3.tscn" id="9_ynf5e"]
+[ext_resource type="AudioStream" uid="uid://c7nqwhg5v2rnp" path="res://main-menu/Jeffery's Game Development/background in game music.mp3" id="10_hptm8"]
 [ext_resource type="PackedScene" uid="uid://ftqm3jktrko2" path="res://Scenes/coin.tscn" id="11_d1ilt"]
 [ext_resource type="PackedScene" uid="uid://dae8yhrvl68wb" path="res://Scenes/car.tscn" id="13_fdnlq"]
 [ext_resource type="PackedScene" uid="uid://wwus2xbdd2s1" path="res://Scenes/key.tscn" id="13_jkdf5"]
 [ext_resource type="PackedScene" uid="uid://dpcx2uqd1ke15" path="res://Scenes/restart.tscn" id="15_k12tt"]
+[ext_resource type="PackedScene" uid="uid://cgcf87lldh5jf" path="res://Scenes/zombie4.tscn" id="15_wsu2k"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wsu2k"]
 size = Vector2(414.75, 1993)
@@ -32,6 +36,22 @@ script = ExtResource("4_jjvhh")
 position = Vector2(-47, 85)
 
 [node name="HUD" parent="." instance=ExtResource("6_21xkr")]
+
+[node name="Zombie2" parent="." instance=ExtResource("7_6bp64")]
+visible = false
+position = Vector2(49, 533)
+
+[node name="Zombie1" parent="." instance=ExtResource("5_kry3j")]
+visible = false
+position = Vector2(-6, -25)
+
+[node name="Zombie3" parent="." instance=ExtResource("9_ynf5e")]
+visible = false
+position = Vector2(-189, 450)
+
+[node name="Zombie4" parent="." instance=ExtResource("15_wsu2k")]
+visible = false
+position = Vector2(85, -218)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("10_hptm8")
@@ -250,7 +270,7 @@ position = Vector2(6728, -52)
 position = Vector2(2545, 291)
 
 [node name="Key3" parent="." instance=ExtResource("13_jkdf5")]
-position = Vector2(4036, 374)
+position = Vector2(4280, 384)
 
 [node name="Key2" parent="." instance=ExtResource("13_jkdf5")]
 position = Vector2(3367, 211)
@@ -270,7 +290,7 @@ shape = SubResource("RectangleShape2D_k12tt")
 [node name="Node2D" type="Node2D" parent="."]
 
 [node name="CAR" parent="Node2D" instance=ExtResource("13_fdnlq")]
-position = Vector2(3086, 48)
+position = Vector2(1506, 43)
 
 [node name="CAR2" parent="Node2D" instance=ExtResource("13_fdnlq")]
 position = Vector2(5341, 49)
@@ -283,3 +303,6 @@ position = Vector2(14704, 51)
 
 [node name="CAR5" parent="Node2D" instance=ExtResource("13_fdnlq")]
 position = Vector2(18882, -23)
+
+[node name="Zombie5" parent="." instance=ExtResource("5_kry3j")]
+position = Vector2(2581, 672)
