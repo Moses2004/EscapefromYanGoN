@@ -1,40 +1,41 @@
 extends CharacterBody2D
+class_name Player
 
-class_name player
-#@onready var animated_sprite_2d: Animatedsprite2D = $Animatedsprite2D
+@onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 
 const GRAVITY : int = 4200
 const JUMP_SPEED : int = -1800
-const MOVE_SPEED : int = 2000
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+const MOVE_SPEED : int = 80
 
 func _physics_process(delta):
+	# Apply gravity
 	velocity.y += GRAVITY * delta
 	velocity.x = 0
-	if is_on_floor():
-		if not get_parent().game_running:
-			$AnimatedSprite2D.play("idle")
-		#else:
-			if Input.is_action_pressed("jump"):
-				velocity.y = JUMP_SPEED
-				#$JumpSound.play()
-			elif Input.is_action_pressed("right"):
-				velocity.x = MOVE_SPEED
-				$AnimatedSprite2D.play("run")
-				$AnimatedSprite2D.flip_h = false
-			elif Input.is_action_pressed("left"):
-				velocity.x = -MOVE_SPEED/10
-				$AnimatedSprite2D.play("run")
-				$AnimatedSprite2D.flip_h = true
-			#else:
-			#	$AnimatedSprite2D.play("run")
-	else:
-		$AnimatedSprite2D.play("jump")
-		
-#func _set_animation():
 	
-		
+	# Movement and jump input
+	if is_on_floor():
+		if Input.is_action_just_pressed("jump"):
+			velocity.y = JUMP_SPEED
+			sprite.play("jump")
+		elif Input.is_action_pressed("right"):
+			velocity.x = MOVE_SPEED
+			sprite.flip_h = false
+			sprite.play("run")
+		elif Input.is_action_pressed("left"):
+			velocity.x = -MOVE_SPEED
+			sprite.flip_h = true
+			sprite.play("run")
+		else:
+			sprite.play("idle")
+	else:
+		# In air → show jump if going up, fall if going down
+		if velocity.y < 0:
+			sprite.play("jump")
+		else:
+			sprite.play("fall")
+
 	move_and_slide()
+
 	
 	print(GameManager.coins)
 	print(GameManager.key)
