@@ -1,12 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://dteqa0hnafimr"]
+[gd_scene load_steps=6 format=3 uid="uid://dteqa0hnafimr"]
 
 [ext_resource type="Script" uid="uid://cmmu333oh1sb" path="res://main-menu/interactive-map/map.gd" id="1_71pa8"]
 [ext_resource type="Texture2D" uid="uid://ow2whnt3p8ta" path="res://main-menu/interactive-map/InteractiveMap.tscn.jpeg" id="1_iw27f"]
 [ext_resource type="Texture2D" uid="uid://thyg06p5h52n" path="res://main-menu/interactive-map/step 1.png.png" id="2_71pa8"]
 [ext_resource type="Texture2D" uid="uid://dxxvrr0kdbd48" path="res://main-menu/interactive-map/Step 2.png.png" id="3_05x41"]
 [ext_resource type="Texture2D" uid="uid://c8y0gf5vwwva8" path="res://main-menu/interactive-map/Step 3.png.png" id="4_gqbix"]
-[ext_resource type="Texture2D" uid="uid://bxp6k47latm2m" path="res://main-menu/interactive-map/step 4.png.png" id="5_oysan"]
-[ext_resource type="Texture2D" uid="uid://d1mhsd2m0wx64" path="res://main-menu/interactive-map/step 5.png.png" id="6_sb2pt"]
 
 [node name="Map" type="Node2D"]
 script = ExtResource("1_71pa8")
@@ -17,58 +15,36 @@ scale = Vector2(1.56522, 1)
 texture = ExtResource("1_iw27f")
 
 [node name="Step1Button" type="TextureButton" parent="."]
-offset_left = 139.0
-offset_top = 317.0
-offset_right = 252.0
-offset_bottom = 422.0
+offset_left = 178.0
+offset_top = 199.0
+offset_right = 291.0
+offset_bottom = 304.0
 
 [node name="Step2Button" type="TextureButton" parent="."]
-offset_left = 317.0
-offset_top = 189.0
-offset_right = 431.0
-offset_bottom = 294.0
+offset_left = 514.0
+offset_top = 195.0
+offset_right = 628.0
+offset_bottom = 300.0
 
 [node name="Step3Button" type="TextureButton" parent="."]
-offset_left = 498.0
-offset_top = 36.0
-offset_right = 612.0
-offset_bottom = 140.0
-
-[node name="Step4Button" type="TextureButton" parent="."]
-offset_left = 731.0
-offset_top = 189.0
-offset_right = 845.0
-offset_bottom = 293.0
-
-[node name="Step5Button" type="TextureButton" parent="."]
-offset_left = 964.0
-offset_top = 153.0
-offset_right = 1078.0
-offset_bottom = 257.0
+offset_left = 854.0
+offset_top = 185.0
+offset_right = 968.0
+offset_bottom = 289.0
 
 [node name="Step1" type="Sprite2D" parent="."]
-position = Vector2(195.438, 369.5)
+position = Vector2(233, 251)
 scale = Vector2(0.16335, 0.190217)
 texture = ExtResource("2_71pa8")
 
 [node name="Step2" type="Sprite2D" parent="."]
-position = Vector2(374, 242)
+position = Vector2(571, 248)
 scale = Vector2(0.164006, 0.190217)
 texture = ExtResource("3_05x41")
 
 [node name="Step3" type="Sprite2D" parent="."]
-position = Vector2(555, 88)
+position = Vector2(911, 239)
 scale = Vector2(0.164964, 0.189091)
 texture = ExtResource("4_gqbix")
-
-[node name="Step4" type="Sprite2D" parent="."]
-position = Vector2(787, 241)
-scale = Vector2(0.164963, 0.186933)
-texture = ExtResource("5_oysan")
-
-[node name="Step5" type="Sprite2D" parent="."]
-position = Vector2(1019, 207)
-scale = Vector2(0.137077, 0.157815)
-texture = ExtResource("6_sb2pt")
 
 [node name="ClickButton" type="AudioStreamPlayer" parent="."]
