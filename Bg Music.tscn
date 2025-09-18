@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://ctex41tkivlhr"]
+
+[ext_resource type="AudioStream" uid="uid://c7nqwhg5v2rnp" path="res://main-menu/Jeffery's Game Development/background in game music.mp3" id="1_oopii"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer"]
+stream = ExtResource("1_oopii")
+autoplay = true
+bus = &"Bg Music"

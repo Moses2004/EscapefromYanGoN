@@ -17,7 +17,12 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-GameManager="*res://Scenes/game_manager.tscn"
+BgMusic="*res://Bg Music.tscn"
+GameManager="*res://Scripts/game_manager.gd"
+
+[display]
+
+window/stretch/mode="canvas_items"
 
 [input]
 

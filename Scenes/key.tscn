@@ -1,7 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://wwus2xbdd2s1"]
+[gd_scene load_steps=14 format=3 uid="uid://wwus2xbdd2s1"]
 
 [ext_resource type="Script" uid="uid://banfrn8caqrp6" path="res://Scripts/key.gd" id="1_udxw8"]
 [ext_resource type="Texture2D" uid="uid://cmek2h3rpxs02" path="res://Sprites/Updated Items/Updated Items/key.png" id="1_ut0wq"]
+[ext_resource type="AudioStream" uid="uid://7pmbe5saqrtc" path="res://Sound/Jeffery's Game Development/Key Pickup.mp3" id="3_brn0f"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_udxw8"]
 atlas = ExtResource("1_ut0wq")
@@ -49,6 +50,104 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1fooj"]
 size = Vector2(35.5, 49)
 
+[sub_resource type="Animation" id="Animation_lc1k7"]
+resource_name = "pickup"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PickupSound:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"queue_free"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_58hov"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PickupSound:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qvjb5"]
+_data = {
+&"RESET": SubResource("Animation_58hov"),
+&"pickup": SubResource("Animation_lc1k7")
+}
+
 [node name="Key" type="Area2D"]
 script = ExtResource("1_udxw8")
 
@@ -63,5 +162,13 @@ frame_progress = 0.570062
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(257.25, 249)
 shape = SubResource("RectangleShape2D_1fooj")
+
+[node name="PickupSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_brn0f")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_qvjb5")
+}
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

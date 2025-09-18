@@ -3,6 +3,7 @@ extends Control
 # === Editable in Inspector ===
 @export var typing_speed := 0.035
 @export var skip_to_scene := "res://scenes/MainGame.tscn"  # set your main game scene
+@onready var click_button: AudioStreamPlayer = $ClickButton
 
 # === Story pages ===
 @export var dialog_pages := [
@@ -73,6 +74,7 @@ func _input(event):
 
 # === Next button ===
 func _on_next_pressed() -> void:
+	click_button.play()
 	if is_typing:
 		dialog_label.text = typing_text
 		is_typing = false
@@ -85,6 +87,7 @@ func _on_next_pressed() -> void:
 
 # === Skip button ===
 func _on_skip_pressed() -> void:
+	click_button.play()
 	get_tree().change_scene_to_file("res://main-menu/interactive-map/map.tscn")
 
 # === Page transition flash ===

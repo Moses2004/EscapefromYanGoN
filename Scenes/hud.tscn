@@ -1,8 +1,9 @@
-[gd_scene load_steps=30 format=3 uid="uid://dg86kk3rq5w1b"]
+[gd_scene load_steps=31 format=3 uid="uid://dg86kk3rq5w1b"]
 
 [ext_resource type="Script" uid="uid://c1k1hyw2bmf6k" path="res://Scripts/game_manager.gd" id="1_6fbih"]
 [ext_resource type="Texture2D" uid="uid://cyq205vv4jap7" path="res://Sprites/coin_gold.png" id="1_e0onf"]
 [ext_resource type="Script" uid="uid://k1qgin6gxyuh" path="res://Scripts/hud.gd" id="1_t1xeu"]
+[ext_resource type="FontFile" uid="uid://dhltegnxapxf5" path="res://front/Born2bSportyV2.ttf" id="2_43w4t"]
 [ext_resource type="Texture2D" uid="uid://dbccp68uac48s" path="res://Sprites/20240707dragon9SlicesC.png" id="2_bjfho"]
 [ext_resource type="Texture2D" uid="uid://i4fv6dotypfd" path="res://Sprites/20240707dragon9SlicesD.png" id="2_fccik"]
 [ext_resource type="Texture2D" uid="uid://lwcr0tuxnd7i" path="res://Sprites/20240707dragon9SlicesE.png" id="6_8jye8"]
@@ -178,7 +179,8 @@ offset_right = 135.0
 offset_bottom = 351.0
 grow_horizontal = 0
 size_flags_horizontal = 0
-theme_override_colors/font_color = Color(0.956863, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_43w4t")
 theme_override_font_sizes/font_size = 45
 text = "
 "
@@ -214,7 +216,8 @@ offset_bottom = 73.0
 size_flags_horizontal = 4
 size_flags_vertical = 0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 20
+theme_override_fonts/font = ExtResource("2_43w4t")
+theme_override_font_sizes/font_size = 30
 text = "SCR: "
 horizontal_alignment = 1
 
@@ -236,8 +239,9 @@ frame_progress = 0.588281
 [node name="KeyLabel" type="Label" parent="."]
 offset_left = 942.0
 offset_top = 7.0
-offset_right = 1068.0
+offset_right = 997.0
 offset_bottom = 70.0
-theme_override_colors/font_color = Color(0.984314, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_43w4t")
 theme_override_font_sizes/font_size = 45
 script = ExtResource("1_6fbih")

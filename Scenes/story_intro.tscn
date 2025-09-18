@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://b4cjwjmth6i67"]
+[gd_scene load_steps=6 format=3 uid="uid://b4cjwjmth6i67"]
 
 [ext_resource type="Script" uid="uid://bgetovc0rnf6n" path="res://Scripts/story_intro.gd" id="1_7oqqq"]
 [ext_resource type="FontFile" uid="uid://dhltegnxapxf5" path="res://front/Born2bSportyV2.ttf" id="2_qb4wh"]
+[ext_resource type="AudioStream" uid="uid://co5thnmp4vadf" path="res://main-menu/Jeffery's Game Development/Button click.mp3" id="3_qb4wh"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qb4wh"]
 bg_color = Color(0.168627, 0.168627, 0.168627, 1)
@@ -114,3 +115,6 @@ text = "Skip"
 layout_mode = 2
 offset_bottom = 8.0
 color = Color(0, 0, 0, 0.00392157)
+
+[node name="ClickButton" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_qb4wh")
