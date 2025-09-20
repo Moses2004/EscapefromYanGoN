@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://dhy8n82k54yed" path="res://main-menu/main_menu.gd" id="1_fu7sn"]
 [ext_resource type="FontFile" uid="uid://dhltegnxapxf5" path="res://front/Born2bSportyV2.ttf" id="4_fdcpn"]
 [ext_resource type="PackedScene" uid="uid://ctex41tkivlhr" path="res://Bg Music.tscn" id="4_lskjb"]
-[ext_resource type="AudioStream" uid="uid://co5thnmp4vadf" path="res://main-menu/Jeffery's Game Development/Button click.mp3" id="5_lskjb"]
+[ext_resource type="AudioStream" uid="uid://co5thnmp4vadf" path="res://Sound/Jeffery's Game Development/Button click.mp3" id="5_lskjb"]
 [ext_resource type="Script" uid="uid://dmsdsx4b1bnyt" path="res://main-menu/audio_control.gd" id="6_lskjb"]
 [ext_resource type="Script" uid="uid://bb2jt8p3rn6tu" path="res://main-menu/fullscreen_control.gd" id="7_lskjb"]
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=52 format=3 uid="uid://biq6nyis38pnv"]
+[gd_scene load_steps=53 format=3 uid="uid://biq6nyis38pnv"]
 
 [ext_resource type="Texture2D" uid="uid://6speyo2ar4m7" path="res://Sprites/Idle.png" id="1_v0iea"]
 [ext_resource type="Texture2D" uid="uid://cpulftyt0guod" path="res://Sprites/Dead.png" id="1_vgqql"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dwkrjfrfigg6n" path="res://Sprites/Run.png" id="3_vgqql"]
 [ext_resource type="Texture2D" uid="uid://1k28xa8ememd" path="res://Sprites/Recharge.png" id="5_8erm5"]
 [ext_resource type="Texture2D" uid="uid://cn0jgbyoo5j36" path="res://Sprites/Shot_1.png" id="7_f1ek2"]
+[ext_resource type="AudioStream" uid="uid://dgiy308j438ua" path="res://Sound/Jeffery's Game Development/Jump Sfx.mp3" id="8_8erm5"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_83xs0"]
 atlas = ExtResource("1_vgqql")
@@ -362,3 +363,7 @@ autoplay = "dead"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(91, 199.5)
 shape = SubResource("RectangleShape2D_tx1dd")
+
+[node name="sfx_jump" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_8erm5")
+volume_db = 2.811
