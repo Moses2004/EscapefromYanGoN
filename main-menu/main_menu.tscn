@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://dhy8n82k54yed" path="res://main-menu/main_menu.gd" id="1_fu7sn"]
 [ext_resource type="FontFile" uid="uid://dhltegnxapxf5" path="res://front/Born2bSportyV2.ttf" id="4_fdcpn"]
 [ext_resource type="PackedScene" uid="uid://ctex41tkivlhr" path="res://Bg Music.tscn" id="4_lskjb"]
-[ext_resource type="AudioStream" uid="uid://co5thnmp4vadf" path="res://Sound/Jeffery's Game Development/Button click.mp3" id="5_lskjb"]
+[ext_resource type="AudioStream" uid="uid://co5thnmp4vadf" path="res://main-menu/Jeffery's Game Development/Button click.mp3" id="5_lskjb"]
 [ext_resource type="Script" uid="uid://dmsdsx4b1bnyt" path="res://main-menu/audio_control.gd" id="6_lskjb"]
 [ext_resource type="Script" uid="uid://bb2jt8p3rn6tu" path="res://main-menu/fullscreen_control.gd" id="7_lskjb"]
 
@@ -70,11 +70,14 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 1.0
+offset_right = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_jix8l")
 
 [node name="MainButtons" type="VBoxContainer" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -141,9 +144,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -256.0
+offset_left = -264.0
 offset_top = -201.0
-offset_right = 243.0
+offset_right = 325.0
 offset_bottom = -117.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -167,18 +170,37 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -211.0
+offset_left = -411.0
 offset_top = -112.0
-offset_right = 211.0
-offset_bottom = 239.0
+offset_right = 471.0
+offset_bottom = 273.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Label" type="Label" parent="Options"]
+[node name="Controls" type="Label" parent="Options"]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
-offset_bottom = 47.0
+offset_top = 5.0
+offset_right = -537.0
+offset_bottom = 52.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.929412, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_fdcpn")
+theme_override_font_sizes/font_size = 40
+text = "Controls"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Options" type="Label" parent="Options"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 425.0
+offset_top = 4.0
+offset_right = -48.0
+offset_bottom = 51.0
 grow_horizontal = 2
 theme_override_colors/font_color = Color(0.929412, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
@@ -188,14 +210,150 @@ text = "Options"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Label2" type="Label" parent="Options"]
+[node name="Jump" type="Label" parent="Options"]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
-offset_left = 3.0
-offset_top = 77.0
-offset_right = -230.0
-offset_bottom = 124.0
+offset_left = 436.0
+offset_top = 65.0
+offset_right = -261.0
+offset_bottom = 112.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.929412, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_fdcpn")
+theme_override_font_sizes/font_size = 40
+text = "Jump"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Pause" type="Label" parent="Options"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 442.0
+offset_top = 123.0
+offset_right = -255.0
+offset_bottom = 170.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.929412, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_fdcpn")
+theme_override_font_sizes/font_size = 40
+text = "Pause"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Forward" type="Label" parent="Options"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 461.0
+offset_top = 184.0
+offset_right = -236.0
+offset_bottom = 231.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.929412, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_fdcpn")
+theme_override_font_sizes/font_size = 40
+text = "Forward"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Backward" type="Label" parent="Options"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 469.0
+offset_top = 240.0
+offset_right = -228.0
+offset_bottom = 287.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.929412, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_fdcpn")
+theme_override_font_sizes/font_size = 40
+text = "Backward"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SpaceBar" type="Label" parent="Options"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 660.0
+offset_top = 67.0
+offset_right = -37.0
+offset_bottom = 114.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.929412, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_fdcpn")
+theme_override_font_sizes/font_size = 40
+text = "Spacebar"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Esc" type="Label" parent="Options"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 617.0
+offset_top = 124.0
+offset_right = -80.0
+offset_bottom = 171.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.929412, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_fdcpn")
+theme_override_font_sizes/font_size = 40
+text = "Esc"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="FrontArrow" type="Label" parent="Options"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 683.0
+offset_top = 182.0
+offset_right = -11.0
+offset_bottom = 229.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.929412, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_fdcpn")
+theme_override_font_sizes/font_size = 40
+text = "Front Arrow"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BackArrow" type="Label" parent="Options"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 677.0
+offset_top = 238.0
+offset_right = -20.0
+offset_bottom = 285.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.929412, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_fdcpn")
+theme_override_font_sizes/font_size = 40
+text = "Back Arrow"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Volume" type="Label" parent="Options"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 1.0
+offset_top = 84.0
+offset_right = -718.0
+offset_bottom = 131.0
 grow_horizontal = 2
 theme_override_colors/font_color = Color(0.929412, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
@@ -207,10 +365,10 @@ vertical_alignment = 1
 
 [node name="Back" type="Button" parent="Options"]
 layout_mode = 0
-offset_left = 118.0
-offset_top = 286.0
-offset_right = 314.0
-offset_bottom = 346.0
+offset_left = 315.0
+offset_top = 316.0
+offset_right = 588.0
+offset_bottom = 376.0
 size_flags_vertical = 3
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_colors/font_color = Color(0.917647, 0, 0, 1)
@@ -226,10 +384,10 @@ text = "Back"
 
 [node name="AudioControl" type="HSlider" parent="Options"]
 layout_mode = 0
-offset_left = 209.0
-offset_top = 78.0
-offset_right = 401.0
-offset_bottom = 118.0
+offset_left = 175.0
+offset_top = 91.0
+offset_right = 367.0
+offset_bottom = 131.0
 theme_override_styles/slider = SubResource("StyleBoxLine_jjoqw")
 theme_override_styles/grabber_area = SubResource("StyleBoxLine_83fn6")
 theme_override_styles/grabber_area_highlight = SubResource("StyleBoxLine_lskjb")
@@ -241,9 +399,9 @@ audio_bus_name = "Bg Music"
 
 [node name="FullscreenControl" type="CheckButton" parent="Options"]
 layout_mode = 0
-offset_left = 53.0
+offset_left = 28.0
 offset_top = 165.0
-offset_right = 396.0
+offset_right = 371.0
 offset_bottom = 238.0
 theme_override_colors/font_color = Color(0.929412, 0, 0, 1)
 theme_override_colors/font_focus_color = Color(0.929412, 0, 0, 1)
