@@ -22,9 +22,9 @@ func _ready() -> void:
 	pause_menu.visible = false
 	pause_overlay.visible = false
 
-func _process(delta: float) -> void:
-	coins_value.text = str(GameManager.coins)
-	key_label.text = str(GameManager.key)
+func _process(_delta: float) -> void:
+	$CoinsValue.text = str(GameManager.coins)
+	$KeyLabel.text = str(GameManager.key)
 
 # Handle ESC key
 func _unhandled_input(event: InputEvent) -> void:

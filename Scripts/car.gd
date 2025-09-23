@@ -11,7 +11,7 @@ func _ready() -> void:
 	else:
 		push_warning("CAR node not found — collision won't trigger!")
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	velocity.x = -speed
 	move_and_slide()
 
