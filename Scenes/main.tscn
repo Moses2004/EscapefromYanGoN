@@ -1,8 +1,9 @@
-[gd_scene load_steps=14 format=3 uid="uid://bctwc2iagbasi"]
+[gd_scene load_steps=15 format=3 uid="uid://bctwc2iagbasi"]
 
 [ext_resource type="PackedScene" uid="uid://do3bjehsmg1on" path="res://Scenes/background.tscn" id="1_8gbba"]
 [ext_resource type="Script" uid="uid://byjckuydw87bu" path="res://Scripts/main.gd" id="1_kry3j"]
 [ext_resource type="PackedScene" uid="uid://2g5ntc3c57pv" path="res://Scenes/road.tscn" id="2_jjvhh"]
+[ext_resource type="PackedScene" uid="uid://co1myw4uj12p" path="res://Scenes/door.tscn" id="3_6iyac"]
 [ext_resource type="PackedScene" uid="uid://biq6nyis38pnv" path="res://Scenes/player.tscn" id="3_kry3j"]
 [ext_resource type="Script" uid="uid://dsxj32fbvnfo8" path="res://Scripts/player.gd" id="4_jjvhh"]
 [ext_resource type="PackedScene" uid="uid://dg86kk3rq5w1b" path="res://Scenes/hud.tscn" id="6_21xkr"]
@@ -20,6 +21,18 @@ size = Vector2(543.5, 2297.5)
 
 [node name="Main" type="Node"]
 script = ExtResource("1_kry3j")
+
+[node name="Key" parent="." instance=ExtResource("13_jkdf5")]
+position = Vector2(2545, 291)
+
+[node name="Key3" parent="." instance=ExtResource("13_jkdf5")]
+position = Vector2(4036, 374)
+
+[node name="Key2" parent="." instance=ExtResource("13_jkdf5")]
+position = Vector2(3367, 211)
+
+[node name="Door" parent="." instance=ExtResource("3_6iyac")]
+position = Vector2(7576, 475)
 
 [node name="Background" parent="." instance=ExtResource("1_8gbba")]
 
@@ -246,15 +259,6 @@ position = Vector2(6651, -48)
 [node name="Coin28" parent="Coins" instance=ExtResource("11_d1ilt")]
 position = Vector2(6728, -52)
 
-[node name="Key" parent="." instance=ExtResource("13_jkdf5")]
-position = Vector2(2545, 291)
-
-[node name="Key3" parent="." instance=ExtResource("13_jkdf5")]
-position = Vector2(4036, 374)
-
-[node name="Key2" parent="." instance=ExtResource("13_jkdf5")]
-position = Vector2(3367, 211)
-
 [node name="RESTART" parent="." instance=ExtResource("15_k12tt")]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
@@ -283,3 +287,7 @@ position = Vector2(14704, 51)
 
 [node name="CAR5" parent="Node2D" instance=ExtResource("13_fdnlq")]
 position = Vector2(18882, -23)
+
+[connection signal="body_entered" from="Key" to="Player" method="_on_key_body_entered"]
+[connection signal="body_entered" from="Door" to="Player" method="_on_door_body_entered"]
+[connection signal="dooropen" from="Player" to="Door" method="_on_player_dooropen"]

@@ -1,17 +1,39 @@
-[gd_scene load_steps=3 format=3 uid="uid://w24qxq8eppj7"]
+[gd_scene load_steps=6 format=3 uid="uid://co1myw4uj12p"]
 
-[ext_resource type="Script" uid="uid://nxavpjkfvu5f" path="res://Scripts/door.gd" id="1_w6aom"]
+[ext_resource type="Script" uid="uid://covc8swvjmru4" path="res://Scenes/door.gd" id="1_fahql"]
+[ext_resource type="Texture2D" uid="uid://cijdq6ylf2xki" path="res://Sprites/Updated Items/Updated Items/doorLocked.png" id="1_p0e35"]
+[ext_resource type="Texture2D" uid="uid://dd4bnqxirrrkd" path="res://Sprites/Updated Items/Updated Items/doorOpen.png" id="2_fahql"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_p0e35"]
-size = Vector2(70, 76)
+[sub_resource type="SpriteFrames" id="SpriteFrames_ab4ky"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_p0e35")
+}],
+"loop": true,
+"name": &"Close",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_fahql")
+}],
+"loop": true,
+"name": &"Open",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a43ba"]
+size = Vector2(184, 341)
 
 [node name="Door" type="Area2D"]
-script = ExtResource("1_w6aom")
+script = ExtResource("1_fahql")
+
+[node name="DoorAnimation" type="AnimatedSprite2D" parent="."]
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_ab4ky")
+animation = &"Close"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(25, 28)
-shape = SubResource("RectangleShape2D_p0e35")
-
-[node name="spawn" type="Marker2D" parent="."]
-
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+position = Vector2(0, 27.5)
+shape = SubResource("RectangleShape2D_a43ba")
