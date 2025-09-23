@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://dg86kk3rq5w1b"]
+[gd_scene load_steps=35 format=3 uid="uid://dg86kk3rq5w1b"]
 
 [ext_resource type="Script" uid="uid://c1k1hyw2bmf6k" path="res://Scripts/game_manager.gd" id="1_6fbih"]
 [ext_resource type="Texture2D" uid="uid://cyq205vv4jap7" path="res://Sprites/coin_gold.png" id="1_e0onf"]
@@ -172,6 +172,20 @@ corner_radius_top_right = 5
 corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5ep0j"]
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4f5kr"]
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7gr8i"]
 bg_color = Color(0, 0, 0, 1)
 corner_radius_top_left = 5
@@ -316,15 +330,15 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -37.0
+offset_left = -53.0
 offset_top = 47.0
-offset_right = 20.0
+offset_right = 26.0
 offset_bottom = 78.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(2.52, 1.8)
-theme_override_styles/normal = SubResource("StyleBoxFlat_7gr8i")
-text = "Restart"
+theme_override_styles/normal = SubResource("StyleBoxFlat_5ep0j")
+text = " Restart "
 
 [node name="BackToMenuButton" type="Button" parent="PauseMenu"]
 layout_mode = 1
@@ -333,16 +347,16 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -80.0
-offset_top = 111.0
-offset_right = 26.0
-offset_bottom = 142.0
+offset_left = -111.0
+offset_top = 110.0
+offset_right = 20.0
+offset_bottom = 141.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(2.48, 1.76)
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_styles/normal = SubResource("StyleBoxFlat_43w4t")
-text = "Back to Menu"
+theme_override_styles/normal = SubResource("StyleBoxFlat_4f5kr")
+text = " Back to Menu "
 
 [node name="QuitButton" type="Button" parent="PauseMenu"]
 layout_mode = 1
@@ -351,10 +365,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -12.0
-offset_top = 172.0
-offset_right = 30.0
-offset_bottom = 203.0
+offset_left = 1.0
+offset_top = 171.0
+offset_right = 43.0
+offset_bottom = 202.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(2.4, 1.76)
