@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://dg86kk3rq5w1b"]
+[gd_scene load_steps=33 format=3 uid="uid://dg86kk3rq5w1b"]
 
 [ext_resource type="Script" uid="uid://c1k1hyw2bmf6k" path="res://Scripts/game_manager.gd" id="1_6fbih"]
 [ext_resource type="Texture2D" uid="uid://cyq205vv4jap7" path="res://Sprites/coin_gold.png" id="1_e0onf"]
@@ -165,7 +165,22 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_43w4t"]
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7gr8i"]
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
 [node name="HUD" type="CanvasLayer"]
+process_mode = 3
 script = ExtResource("1_t1xeu")
 
 [node name="CoinsValue" type="Label" parent="."]
@@ -245,3 +260,115 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_43w4t")
 theme_override_font_sizes/font_size = 45
 script = ExtResource("1_6fbih")
+
+[node name="PauseButton" type="Button" parent="."]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -99.0
+offset_top = -308.0
+offset_right = -44.0
+offset_bottom = -277.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Pause"
+
+[node name="PauseMenu" type="Control" parent="."]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -40.0
+offset_top = -76.0
+offset_right = -40.0
+offset_bottom = -76.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ResumeButton" type="Button" parent="PauseMenu"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.0
+offset_top = -15.0
+offset_right = 33.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2.12, 1.76)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_43w4t")
+text = "Resume"
+
+[node name="RestartButton" type="Button" parent="PauseMenu"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.0
+offset_top = 47.0
+offset_right = 20.0
+offset_bottom = 78.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2.52, 1.8)
+theme_override_styles/normal = SubResource("StyleBoxFlat_7gr8i")
+text = "Restart"
+
+[node name="BackToMenuButton" type="Button" parent="PauseMenu"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -80.0
+offset_top = 111.0
+offset_right = 26.0
+offset_bottom = 142.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2.48, 1.76)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_43w4t")
+text = "Back to Menu"
+
+[node name="QuitButton" type="Button" parent="PauseMenu"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -12.0
+offset_top = 172.0
+offset_right = 30.0
+offset_bottom = 203.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2.4, 1.76)
+theme_override_styles/normal = SubResource("StyleBoxFlat_7gr8i")
+text = "Quit"
+
+[node name="PauseOverlay" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.37037, 0.346162, 0.30151, 0.486275)
+
+[connection signal="pressed" from="PauseMenu/RestartButton" to="." method="_on_restart_button_pressed"]
+[connection signal="pressed" from="PauseMenu/BackToMenuButton" to="." method="_on_back_to_menu_button_pressed"]
