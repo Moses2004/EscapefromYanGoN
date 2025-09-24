@@ -361,9 +361,14 @@ animation = &"fall"
 autoplay = "dead"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(91, 199.5)
+position = Vector2(94.5, 204)
 shape = SubResource("RectangleShape2D_tx1dd")
 
 [node name="sfx_jump" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_8erm5")
 volume_db = 2.811
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(90.5, 200)
+limit_top = 0
+limit_bottom = 0

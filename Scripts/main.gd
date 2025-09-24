@@ -19,8 +19,8 @@ var difficulty: int
 const MAX_DIFFICULTY: int = 2
 var score: float
 var speed: float
-const START_SPEED: float = 7.0
-const MAX_SPEED: float = 25.0
+const START_SPEED: float = 10.0
+const MAX_SPEED: float = 30.0
 const SPEED_MODIFIER: float = 5000.0
 var screen_size: Vector2i
 var ground_height: int
@@ -45,7 +45,7 @@ func new_game() -> void:
 	
 	$Player.position = PLAYER_START_POS
 	$Player.velocity = Vector2(0, 0)
-	$Camera2D.position = CAM_START_POS
+	
 	$Road.position = Vector2(0, 0)
 	
 	$RESTART.hide()
@@ -62,17 +62,18 @@ func _process(_delta: float) -> void:
 			speed = MAX_SPEED
 		
 		$Player.position.x += speed
-		$Camera2D.position.x += speed
+		
 		score += speed
 		
 		generate_obs()
 
-		# Update ground position
-		if $Camera2D.position.x - $Road.position.x > screen_size.x * 1.5:
+		# Update ground position based on player position
+		if $Player.position.x - $Road.position.x > screen_size.x * 1.5:
 			$Road.position.x += screen_size.x
-			
+
+		# Clean up obstacles behind player
 		for obs in obstacles:
-			if obs.position.x < ($Camera2D.position.x - screen_size.x):
+			if obs.position.x < ($Player.position.x - screen_size.x):
 				remove_obs(obs)
 	
 	show_score()
@@ -89,7 +90,7 @@ func generate_obs() -> void:
 
 			var obs_x: float = screen_size.x + score + 100 + (i * 100)
 			var ground_y = $Road.position.y
-			var obs_y: float = ground_y + (obs_height * obs_scale.y / 2) + 500
+			var obs_y: float = ground_y + (obs_height * obs_scale.y / 2) + 550
 			
 			last_obs = obs
 			add_obs(obs, obs_x, obs_y)

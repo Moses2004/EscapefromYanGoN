@@ -5,7 +5,7 @@ class_name Player
 @onready var sfx_jump: AudioStreamPlayer = $sfx_jump
 
 const GRAVITY : int = 4200
-const JUMP_SPEED : int = -1800
+const JUMP_SPEED : int = -2000
 const MOVE_SPEED : int = 80
 
 var key = false

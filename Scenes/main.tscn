@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://biq6nyis38pnv" path="res://Scenes/player.tscn" id="3_kry3j"]
 [ext_resource type="Script" uid="uid://dsxj32fbvnfo8" path="res://Scripts/player.gd" id="4_jjvhh"]
 [ext_resource type="PackedScene" uid="uid://dg86kk3rq5w1b" path="res://Scenes/hud.tscn" id="6_21xkr"]
-[ext_resource type="AudioStream" uid="uid://c7nqwhg5v2rnp" path="res://Sound/Jeffery's Game Development/background in game music.mp3" id="10_hptm8"]
+[ext_resource type="AudioStream" uid="uid://c7nqwhg5v2rnp" path="res://main-menu/Jeffery's Game Development/background in game music.mp3" id="10_hptm8"]
 [ext_resource type="PackedScene" uid="uid://ftqm3jktrko2" path="res://Scenes/coin.tscn" id="11_d1ilt"]
 [ext_resource type="PackedScene" uid="uid://dae8yhrvl68wb" path="res://Scenes/car.tscn" id="13_fdnlq"]
 [ext_resource type="PackedScene" uid="uid://wwus2xbdd2s1" path="res://Scenes/key.tscn" id="13_jkdf5"]
@@ -49,9 +49,6 @@ position = Vector2(-47, 85)
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("10_hptm8")
 autoplay = true
-
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(576, 322)
 
 [node name="Coins" type="Node" parent="."]
 
