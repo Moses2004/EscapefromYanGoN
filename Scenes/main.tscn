@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://biq6nyis38pnv" path="res://Scenes/player.tscn" id="3_kry3j"]
 [ext_resource type="Script" uid="uid://dsxj32fbvnfo8" path="res://Scripts/player.gd" id="4_jjvhh"]
 [ext_resource type="PackedScene" uid="uid://dg86kk3rq5w1b" path="res://Scenes/hud.tscn" id="6_21xkr"]
-[ext_resource type="AudioStream" uid="uid://c7nqwhg5v2rnp" path="res://main-menu/Jeffery's Game Development/background in game music.mp3" id="10_hptm8"]
+[ext_resource type="AudioStream" uid="uid://c7nqwhg5v2rnp" path="res://Sound/Jeffery's Game Development/background in game music.mp3" id="10_hptm8"]
 [ext_resource type="PackedScene" uid="uid://ftqm3jktrko2" path="res://Scenes/coin.tscn" id="11_d1ilt"]
 [ext_resource type="PackedScene" uid="uid://dae8yhrvl68wb" path="res://Scenes/car.tscn" id="13_fdnlq"]
 [ext_resource type="PackedScene" uid="uid://wwus2xbdd2s1" path="res://Scenes/key.tscn" id="13_jkdf5"]
@@ -36,13 +36,12 @@ position = Vector2(7576, 475)
 
 [node name="Background" parent="." instance=ExtResource("1_8gbba")]
 
+[node name="Road" parent="." instance=ExtResource("2_jjvhh")]
+
 [node name="Player" parent="." instance=ExtResource("3_kry3j")]
 z_index = 1
 position = Vector2(-71, 168)
 script = ExtResource("4_jjvhh")
-
-[node name="Road" parent="." instance=ExtResource("2_jjvhh")]
-position = Vector2(-47, 85)
 
 [node name="HUD" parent="." instance=ExtResource("6_21xkr")]
 
@@ -261,7 +260,7 @@ position = Vector2(6728, -52)
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(-209, -91)
+position = Vector2(-202, -91)
 shape = SubResource("RectangleShape2D_wsu2k")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
