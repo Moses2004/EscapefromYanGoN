@@ -16,7 +16,7 @@ func _on_step1_pressed():
 
 func _on_step2_pressed():
 	click_button.play()
-	get_tree().change_scene_to_file("res://interactive-map/level_2.tscn")
+	get_tree().change_scene_to_file("res://Scenes/step_2.tscn")
 
 func _on_step3_pressed():
 	click_button.play()

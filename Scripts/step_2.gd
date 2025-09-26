@@ -2,6 +2,7 @@ extends Node
 
 @onready var animated_sprite = $Player/AnimatedSprite2D
 @onready var coins
+@onready var keys
 
 # preload obstacles
 var rock_scene = preload("res://Scenes/rock.tscn")
@@ -33,12 +34,16 @@ var spawn_interval: float = 2.0
 func _ready() -> void:
 	screen_size = get_window().size
 	ground_height = $Road/Sprite2D.texture.get_height()
-	$RESTART/VBoxContainer/Button.pressed.connect(new_game)
+	$RESTART/VBoxContainer/Button3/Button.pressed.connect(new_game)
 	new_game()
 
 func new_game() -> void:
 	score = 0
 	coins = 0
+	keys = 0
+	GameManager.coins = 0     # reset global coins
+	GameManager.score = 0     # reset global score if needed
+	GameManager.key = 0		# reset gobba key
 	game_running = false
 	get_tree().paused = false
 	difficulty = 0
@@ -49,6 +54,7 @@ func new_game() -> void:
 	$Road.position = Vector2(0, 0)
 	
 	$RESTART.hide()
+
 
 func _process(_delta: float) -> void:
 	if Input.is_action_pressed("right"):
@@ -124,6 +130,11 @@ func game_over() -> void:
 		animated_sprite.play("dead")
 		get_tree().paused = true
 		game_running = false
+
+		# Update final results
+		$RESTART/VBoxContainer/Button2.text = "Final Score: " + str(int(score))
+		$RESTART/VBoxContainer/Button3.text = "Total Coins: " + str(GameManager.coins)
+
 		$RESTART.show()
 	else:
 		print("Error: AnimatedSprite2D is null!")

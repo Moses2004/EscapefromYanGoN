@@ -65,7 +65,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 9
 
-[node name="Button" type="Button" parent="VBoxContainer"]
+[node name="Button2" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
@@ -78,9 +78,73 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_d4x15")
 theme_override_styles/hover = SubResource("StyleBoxFlat_7hi4k")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_p630i")
 theme_override_styles/normal = SubResource("StyleBoxFlat_ox57f")
+text = "Final Score:"
+
+[node name="click button" type="AudioStreamPlayer" parent="VBoxContainer/Button2"]
+stream = ExtResource("3_xmjwj")
+
+[node name="Button3" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0.917647, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_12nsu")
+theme_override_font_sizes/font_size = 46
+theme_override_styles/focus = SubResource("StyleBoxEmpty_d4x15")
+theme_override_styles/hover = SubResource("StyleBoxFlat_7hi4k")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_p630i")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ox57f")
+text = "Total Coins:"
+
+[node name="click button" type="AudioStreamPlayer" parent="VBoxContainer/Button3"]
+stream = ExtResource("3_xmjwj")
+
+[node name="Button" type="Button" parent="VBoxContainer/Button3"]
+layout_mode = 2
+offset_left = 605.0
+offset_top = 240.0
+offset_right = 718.0
+offset_bottom = 296.0
+size_flags_horizontal = 4
+size_flags_vertical = 10
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0.917647, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_12nsu")
+theme_override_font_sizes/font_size = 46
+theme_override_styles/focus = SubResource("StyleBoxEmpty_d4x15")
+theme_override_styles/hover = SubResource("StyleBoxFlat_7hi4k")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_p630i")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ox57f")
 text = "RESTART"
 
-[node name="click button" type="AudioStreamPlayer" parent="VBoxContainer/Button"]
+[node name="click button" type="AudioStreamPlayer" parent="VBoxContainer/Button3/Button"]
+stream = ExtResource("3_xmjwj")
+
+[node name="Home" type="Button" parent="VBoxContainer/Button3"]
+layout_mode = 2
+offset_left = -330.0
+offset_top = 238.0
+offset_right = -217.0
+offset_bottom = 294.0
+size_flags_horizontal = 4
+size_flags_vertical = 10
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0.917647, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_12nsu")
+theme_override_font_sizes/font_size = 46
+theme_override_styles/focus = SubResource("StyleBoxEmpty_d4x15")
+theme_override_styles/hover = SubResource("StyleBoxFlat_7hi4k")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_p630i")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ox57f")
+text = "Home"
+
+[node name="click button" type="AudioStreamPlayer" parent="VBoxContainer/Button3/Home"]
 stream = ExtResource("3_xmjwj")
 
 [node name="Label" type="Label" parent="."]
@@ -89,10 +153,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -256.0
-offset_top = -201.0
-offset_right = 243.0
-offset_bottom = -117.0
+offset_left = -217.0
+offset_top = -273.0
+offset_right = 282.0
+offset_bottom = -181.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0.929412, 0, 0, 1)
