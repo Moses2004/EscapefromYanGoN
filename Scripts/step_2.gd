@@ -34,9 +34,14 @@ var spawn_interval: float = 2.0
 func _ready() -> void:
 	screen_size = get_window().size
 	ground_height = $Road/Sprite2D.texture.get_height()
-	$RESTART/VBoxContainer/Button3/Button.pressed.connect(new_game)
+	$RESTART/VBoxContainer/Button3/Button.pressed.connect(_on_restart_button_pressed)
 	$RESTART/VBoxContainer/Button3/Home.pressed.connect(_on_home_pressed)
 	new_game()
+	
+func _on_restart_button_pressed() -> void:
+	get_tree().paused = false  # unpause before restarting
+	var current_scene = get_tree().current_scene
+	get_tree().reload_current_scene()
 	
 func _on_home_pressed() -> void:
 	get_tree().paused = false   # unpause in case game was paused

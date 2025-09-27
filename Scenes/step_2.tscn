@@ -31,7 +31,7 @@ position = Vector2(4036, 374)
 position = Vector2(3367, 211)
 
 [node name="Door" parent="." instance=ExtResource("3_fyhfc")]
-position = Vector2(7576, 475)
+position = Vector2(20448, 249)
 
 [node name="Player" parent="." instance=ExtResource("5_sc4r5")]
 z_index = 1
@@ -158,7 +158,7 @@ position = Vector2(16412, 1)
 position = Vector2(16610, 3)
 
 [node name="Coin59" parent="Coins" instance=ExtResource("10_hed8b")]
-position = Vector2(16511, -113)
+position = Vector2(16497, -131)
 
 [node name="Coin61" parent="Coins" instance=ExtResource("10_hed8b")]
 position = Vector2(17626, 34)

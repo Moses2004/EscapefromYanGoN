@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://dpcx2uqd1ke15"]
+[gd_scene load_steps=10 format=3 uid="uid://dpcx2uqd1ke15"]
 
 [ext_resource type="Texture2D" uid="uid://b5y02cd48t7dv" path="res://main-menu/Background.png" id="1_ttvwi"]
 [ext_resource type="FontFile" uid="uid://bbjbp5hborrr5" path="res://main-menu/shlop rg.otf" id="2_12nsu"]
+[ext_resource type="FontFile" uid="uid://dhltegnxapxf5" path="res://front/Born2bSportyV2.ttf" id="2_xmjwj"]
 [ext_resource type="AudioStream" uid="uid://co5thnmp4vadf" path="res://Sound/Jeffery's Game Development/Button click.mp3" id="3_xmjwj"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hpwn5"]
@@ -72,7 +73,7 @@ theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_colors/font_color = Color(0.917647, 0, 0, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_12nsu")
+theme_override_fonts/font = ExtResource("2_xmjwj")
 theme_override_font_sizes/font_size = 46
 theme_override_styles/focus = SubResource("StyleBoxEmpty_d4x15")
 theme_override_styles/hover = SubResource("StyleBoxFlat_7hi4k")
@@ -90,7 +91,7 @@ theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_colors/font_color = Color(0.917647, 0, 0, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_12nsu")
+theme_override_fonts/font = ExtResource("2_xmjwj")
 theme_override_font_sizes/font_size = 46
 theme_override_styles/focus = SubResource("StyleBoxEmpty_d4x15")
 theme_override_styles/hover = SubResource("StyleBoxFlat_7hi4k")
@@ -103,9 +104,9 @@ stream = ExtResource("3_xmjwj")
 
 [node name="Button" type="Button" parent="VBoxContainer/Button3"]
 layout_mode = 2
-offset_left = 605.0
-offset_top = 240.0
-offset_right = 718.0
+offset_left = 574.0
+offset_top = 234.0
+offset_right = 746.0
 offset_bottom = 296.0
 size_flags_horizontal = 4
 size_flags_vertical = 10
@@ -113,7 +114,7 @@ theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_colors/font_color = Color(0.917647, 0, 0, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_12nsu")
+theme_override_fonts/font = ExtResource("2_xmjwj")
 theme_override_font_sizes/font_size = 46
 theme_override_styles/focus = SubResource("StyleBoxEmpty_d4x15")
 theme_override_styles/hover = SubResource("StyleBoxFlat_7hi4k")
@@ -136,7 +137,7 @@ theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_colors/font_color = Color(0.917647, 0, 0, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_12nsu")
+theme_override_fonts/font = ExtResource("2_xmjwj")
 theme_override_font_sizes/font_size = 46
 theme_override_styles/focus = SubResource("StyleBoxEmpty_d4x15")
 theme_override_styles/hover = SubResource("StyleBoxFlat_7hi4k")

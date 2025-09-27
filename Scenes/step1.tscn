@@ -31,7 +31,7 @@ position = Vector2(4036, 374)
 position = Vector2(3367, 211)
 
 [node name="Door" parent="." instance=ExtResource("3_iv0aw")]
-position = Vector2(7576, 475)
+position = Vector2(20478, 467)
 
 [node name="Background" parent="." instance=ExtResource("4_f048m")]
 
