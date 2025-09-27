@@ -349,7 +349,7 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tx1dd"]
 size = Vector2(26, 70)
 
-[node name="Player" type="CharacterBody2D" groups=["player"]]
+[node name="Player" type="CharacterBody2D"]
 scale = Vector2(2, 2)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -357,8 +357,8 @@ texture_filter = 1
 position = Vector2(97.5, 169)
 scale = Vector2(1.07105, 1)
 sprite_frames = SubResource("SpriteFrames_f1ek2")
-animation = &"idle"
-autoplay = "idle"
+animation = &"fall"
+autoplay = "dead"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(94.5, 204)

@@ -66,3 +66,11 @@ func _on_key_body_entered(body: Node2D) -> void:
 	if body.name.begins_with("Key"):  # Make sure it's really a key
 		GameManager.key += 1
 		body.queue_free()
+
+func _on_door_body_entered(body: Node2D) -> void:
+	if GameManager.key >= 3:  # ✅ Require 3 keys
+		emit_signal("dooropen")
+		await get_tree().create_timer(0.5).timeout
+		get_tree().change_scene_to_file("res://Scenes/World.tscn")
+	else:
+		print("You need 3 keys to open this door!")
