@@ -33,14 +33,14 @@ var spawn_interval: float = 2.0
 
 func _ready() -> void:
 	screen_size = get_window().size
-<<<<<<< HEAD:Scripts/step_2.gd
 	ground_height = $Road/Sprite2D.texture.get_height()
 	$RESTART/VBoxContainer/Button3/Button.pressed.connect(new_game)
-=======
-	ground_height = $Road/ParallaxBackground/ParallaxLayer/Sprite2D.texture.get_height()
-	$RESTART/VBoxContainer/Button.pressed.connect(new_game)
->>>>>>> 45bdc0ce9702763cdb27aa78152bb2de3fa1fa5f:Scripts/main.gd
+	$RESTART/VBoxContainer/Button3/Home.pressed.connect(_on_home_pressed)
 	new_game()
+	
+func _on_home_pressed() -> void:
+	get_tree().paused = false   # unpause in case game was paused
+	get_tree().change_scene_to_file("res://main-menu/interactive-map/map.tscn")
 
 func new_game() -> void:
 	score = 0
