@@ -23,16 +23,16 @@ size = Vector2(543.5, 2297.5)
 script = ExtResource("1_kry3j")
 
 [node name="Key" parent="." instance=ExtResource("13_jkdf5")]
-position = Vector2(2545, 291)
+position = Vector2(2545, 59)
 
 [node name="Key3" parent="." instance=ExtResource("13_jkdf5")]
-position = Vector2(4036, 374)
+position = Vector2(4040, 112)
 
 [node name="Key2" parent="." instance=ExtResource("13_jkdf5")]
-position = Vector2(3367, 211)
+position = Vector2(3372, 39)
 
 [node name="Door" parent="." instance=ExtResource("3_6iyac")]
-position = Vector2(7576, 475)
+position = Vector2(8084, 444)
 
 [node name="Background" parent="." instance=ExtResource("1_8gbba")]
 
