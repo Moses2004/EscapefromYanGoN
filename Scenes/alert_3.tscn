@@ -108,7 +108,7 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_3xidh")
 theme_override_styles/hover = SubResource("StyleBoxFlat_5lcus")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_0bq8y")
 theme_override_styles/normal = SubResource("StyleBoxFlat_e3lfd")
-text = "Mission --> Collect 5 keys to unlock the door
+text = "Mission --> Collect 3 keys to unlock the door
 
 
 Alert - When you hit the zombies, the player 

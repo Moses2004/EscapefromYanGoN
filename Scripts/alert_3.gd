@@ -10,7 +10,7 @@ func _ready():
 # Each function changes to a different level
 func _on_step1_pressed():
 	click_button.play()
-	get_tree().change_scene_to_file("res://Scenes/step3.tscn")
+	get_tree().change_scene_to_file("res://Scenes/step_3.tscn")
 
 
 func _on_step_1_button_pressed():

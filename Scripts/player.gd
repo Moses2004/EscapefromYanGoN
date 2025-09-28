@@ -76,7 +76,7 @@ func _on_door_body_entered(body: Node2D) -> void:
 			get_tree().change_scene_to_file("res://Scenes/Step2Dialogue.tscn")
 		elif current_scene.ends_with("res://Scenes/step_2.tscn"):
 			get_tree().change_scene_to_file("res://Scenes/Step3Dialouge.tscn")
-		elif current_scene.ends_with("res://Scenes/step3.tscn"):
+		elif current_scene.ends_with("res://Scenes/step_3.tscn"):
 			get_tree().change_scene_to_file("res://Scenes/the_ending.tscn")
 		else:
 			print("⚠️ No matching next step for: ", current_scene)
