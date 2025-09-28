@@ -12,11 +12,11 @@ func _ready():
 # Each function changes to a different level
 func _on_step1_pressed():
 	click_button.play()
-	get_tree().change_scene_to_file("res://Scenes/main.tscn")
+	get_tree().change_scene_to_file("res://Scenes/alertone.tscn")
 
 func _on_step2_pressed():
 	click_button.play()
-	get_tree().change_scene_to_file("res://Scenes/step_2.tscn")
+	get_tree().change_scene_to_file("res://Scenes/alerttwo.tscn")
 
 func _on_step3_pressed():
 	click_button.play()

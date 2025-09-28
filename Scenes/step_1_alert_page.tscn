@@ -1,0 +1,127 @@
+[gd_scene load_steps=9 format=3 uid="uid://lkht78rnyv34"]
+
+[ext_resource type="Texture2D" uid="uid://b5y02cd48t7dv" path="res://main-menu/Background.png" id="1_3orqw"]
+[ext_resource type="FontFile" uid="uid://dhltegnxapxf5" path="res://front/Born2bSportyV2.ttf" id="2_2vfrq"]
+[ext_resource type="AudioStream" uid="uid://co5thnmp4vadf" path="res://main-menu/Jeffery's Game Development/Button click.mp3" id="3_2b0nd"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_akjuw"]
+texture = ExtResource("1_3orqw")
+modulate_color = Color(0.646029, 0.646029, 0.646029, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_412ph"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ghurf"]
+bg_color = Color(0.800491, 0.800491, 0.800491, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0, 0, 0, 0.203922)
+shadow_size = 5
+shadow_offset = Vector2(0, 3.41)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xv648"]
+bg_color = Color(0.581033, 0.581033, 0.581033, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0, 0, 0, 0.203922)
+shadow_size = 5
+shadow_offset = Vector2(0, 3.41)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6ppfu"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0, 0, 0, 0.203922)
+shadow_size = 5
+shadow_offset = Vector2(0, 3.41)
+
+[node name="onealertpage" type="CanvasLayer"]
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_akjuw")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.586
+offset_left = -396.0
+offset_top = -94.0
+offset_right = 391.0
+offset_bottom = 0.271973
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 9
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 410.0
+offset_top = 51.0
+offset_right = 665.0
+offset_bottom = 127.0
+size_flags_vertical = 3
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0.917647, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_2vfrq")
+theme_override_font_sizes/font_size = 46
+theme_override_styles/focus = SubResource("StyleBoxEmpty_412ph")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ghurf")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_xv648")
+theme_override_styles/normal = SubResource("StyleBoxFlat_6ppfu")
+text = "STEP { 1 }"
+
+[node name="Button3" type="Button" parent="."]
+offset_left = 74.0
+offset_top = 204.0
+offset_right = 1079.0
+offset_bottom = 447.0
+size_flags_vertical = 3
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_2vfrq")
+theme_override_font_sizes/font_size = 46
+theme_override_styles/focus = SubResource("StyleBoxEmpty_412ph")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ghurf")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_xv648")
+theme_override_styles/normal = SubResource("StyleBoxFlat_6ppfu")
+text = "Mission --> Collect 3 keys to unlock the door
+
+
+Alert - When you hit the zombies, the player 
+will die immediately."
+
+[node name="play" type="Button" parent="."]
+offset_left = 939.0
+offset_top = 523.0
+offset_right = 1111.0
+offset_bottom = 585.0
+size_flags_horizontal = 4
+size_flags_vertical = 10
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0.917647, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_2vfrq")
+theme_override_font_sizes/font_size = 46
+theme_override_styles/focus = SubResource("StyleBoxEmpty_412ph")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ghurf")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_xv648")
+theme_override_styles/normal = SubResource("StyleBoxFlat_6ppfu")
+text = "PLAY"
+
+[node name="click button" type="AudioStreamPlayer" parent="play"]
+stream = ExtResource("3_2b0nd")

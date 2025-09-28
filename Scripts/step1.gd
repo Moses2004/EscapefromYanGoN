@@ -3,6 +3,7 @@ extends Node
 @onready var animated_sprite = $Player/AnimatedSprite2D
 @onready var coins
 @onready var keys
+@onready var onealertpage
 
 # preload obstacles
 var rock_scene = preload("res://Scenes/rock.tscn")
@@ -46,7 +47,7 @@ func _on_restart_button_pressed() -> void:
 func _on_home_pressed() -> void:
 	get_tree().paused = false   # unpause in case game was paused
 	get_tree().change_scene_to_file("res://main-menu/interactive-map/map.tscn")
-
+	
 func new_game() -> void:
 	score = 0
 	coins = 0

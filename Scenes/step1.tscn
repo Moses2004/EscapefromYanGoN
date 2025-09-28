@@ -7,9 +7,9 @@
 [ext_resource type="PackedScene" uid="uid://biq6nyis38pnv" path="res://Scenes/player.tscn" id="5_f20jm"]
 [ext_resource type="Script" uid="uid://dsxj32fbvnfo8" path="res://Scripts/player.gd" id="6_h4dag"]
 [ext_resource type="PackedScene" uid="uid://dg86kk3rq5w1b" path="res://Scenes/hud.tscn" id="8_6lrx0"]
-[ext_resource type="AudioStream" uid="uid://c7nqwhg5v2rnp" path="res://Sound/Jeffery's Game Development/background in game music.mp3" id="9_rq26c"]
+[ext_resource type="AudioStream" uid="uid://c7nqwhg5v2rnp" path="res://main-menu/Jeffery's Game Development/background in game music.mp3" id="9_rq26c"]
 [ext_resource type="PackedScene" uid="uid://ftqm3jktrko2" path="res://Scenes/coin.tscn" id="10_8y4qx"]
-[ext_resource type="PackedScene" path="res://Scripts/road.tscn" id="11_e7a7u"]
+[ext_resource type="PackedScene" uid="uid://b00e6jse0xnt0" path="res://Scripts/road.tscn" id="11_e7a7u"]
 [ext_resource type="PackedScene" uid="uid://dpcx2uqd1ke15" path="res://Scenes/restart.tscn" id="11_nyjcp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wsu2k"]
