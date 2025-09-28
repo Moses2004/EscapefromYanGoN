@@ -33,7 +33,7 @@ var spawn_interval: float = 2.0
 
 func _ready() -> void:
 	screen_size = get_window().size
-	ground_height = $Road/Sprite2D.texture.get_height()
+	ground_height = $Road/ParallaxBackground/ParallaxLayer/Sprite2D.texture.get_height()
 	$RESTART/VBoxContainer/Button3/Button.pressed.connect(_on_restart_button_pressed)
 	$RESTART/VBoxContainer/Button3/Home.pressed.connect(_on_home_pressed)
 	new_game()

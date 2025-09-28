@@ -33,7 +33,7 @@ var spawn_interval: float = 2.0
 
 func _ready() -> void:
 	screen_size = get_window().size
-	ground_height = $Road/Sprite2D.texture.get_height()
+	ground_height = $Road/ParallaxBackground/ParallaxLayer/Sprite2D.texture.get_height()
 	$RESTART/VBoxContainer/Button3/Button.pressed.connect(_on_restart_button_pressed)
 	$RESTART/VBoxContainer/Button3/Home.pressed.connect(_on_home_pressed)
 	new_game()
@@ -72,43 +72,50 @@ func _process(_delta: float) -> void:
 		game_running = false
 
 	if game_running:
+		# Update speed based on score
 		speed = START_SPEED + (score / SPEED_MODIFIER)
-		if speed > MAX_SPEED:
-			speed = MAX_SPEED
-		
-		$Player.position.x += speed
-		
-		score += speed
-		
-		generate_obs()
+		speed = clamp(speed, START_SPEED, MAX_SPEED)
 
-		# Update ground position based on player position
+		# Move player with delta
+		$Player.position.x += speed * _delta
+
+		# Update score based on movement
+		score += speed * _delta
+
+		# Spawn obstacles based on time
+		time_since_last_spawn += _delta
+		if time_since_last_spawn >= spawn_interval:
+			generate_obs()
+			time_since_last_spawn = 0.0
+
+		# Update ground position
 		if $Player.position.x - $Road.position.x > screen_size.x * 1.5:
 			$Road.position.x += screen_size.x
+		elif $Player.position.x - $Road.position.x < -screen_size.x * 0.5:
+			$Road.position.x -= screen_size.x
 
 		# Clean up obstacles behind player
 		for obs in obstacles:
 			if obs.position.x < ($Player.position.x - screen_size.x):
 				remove_obs(obs)
-	
+
 	show_score()
 
 func generate_obs() -> void:
-	if obstacles.is_empty() or last_obs.position.x < score + randi_range(300, 500):
-		var obs_type = obstacle_types[randi() % obstacle_types.size()]
-		var max_obs = difficulty + 1
-		for i in range(randi() % max_obs + 1):
-			var obs = obs_type.instantiate()
-			var sprite = obs.get_node("Sprite2D")
-			var obs_height = sprite.texture.get_height()
-			var obs_scale = sprite.scale
+	var obs_type = obstacle_types[randi() % obstacle_types.size()]
+	var max_obs = difficulty + 1
+	for i in range(randi() % max_obs + 1):
+		var obs = obs_type.instantiate()
+		var sprite = obs.get_node("Sprite2D")
+		var obs_height = sprite.texture.get_height()
+		var obs_scale = sprite.scale
 
-			var obs_x: float = screen_size.x + score + 100 + (i * 100)
-			var ground_y = $Road.position.y
-			var obs_y: float = ground_y + (obs_height * obs_scale.y / 2) + 550
-			
-			last_obs = obs
-			add_obs(obs, obs_x, obs_y)
+		var obs_x: float = $Player.position.x + screen_size.x + (i * 100)
+		var ground_y = $Road.position.y
+		var obs_y: float = ground_y + (obs_height * obs_scale.y / 2) + 550
+		
+		last_obs = obs
+		add_obs(obs, obs_x, obs_y)
 
 func add_obs(obs: Node2D, x: float, y: float) -> void:
 	obs.position = Vector2(x, y)
@@ -131,9 +138,8 @@ func show_score() -> void:
 func spawn_coin_cluster() -> void:
 	var _count = randi_range(4, 8) # unused var fixed
 	difficulty = int(score / float(SPEED_MODIFIER))
-	if difficulty > MAX_DIFFICULTY:
-		difficulty = MAX_DIFFICULTY
-
+	difficulty = clamp(difficulty, 0, MAX_DIFFICULTY)
+ 
 func game_over() -> void:
 	if animated_sprite:
 		animated_sprite.play("dead")

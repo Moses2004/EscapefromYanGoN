@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://do3bjehsmg1on"]
+[gd_scene load_steps=10 format=3 uid="uid://do3bjehsmg1on"]
 
 [ext_resource type="Texture2D" uid="uid://s5buxbce4kin" path="res://Sprites/layer1.png" id="1_sn1xx"]
 [ext_resource type="Texture2D" uid="uid://bgg0wvie086yy" path="res://Sprites/layer3.jpg" id="2_4aqey"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://x8ue80csiwa1" path="res://Sprites/l1.png" id="4_xgxeb"]
 [ext_resource type="Texture2D" uid="uid://b3a38e56oqdts" path="res://Sprites/pagoda.png" id="5_wi0l6"]
 [ext_resource type="Texture2D" uid="uid://b4l1lli0a5tln" path="res://Sprites/building layer 2.png" id="6_b4xn0"]
+[ext_resource type="Texture2D" uid="uid://dt06pv8dhlv5j" path="res://Sprites/road_normal.png" id="9_wi0l6"]
 
 [node name="Background" type="ParallaxBackground"]
 
@@ -124,3 +125,11 @@ texture = ExtResource("4_xgxeb")
 position = Vector2(3128, 591)
 scale = Vector2(0.954297, 0.473601)
 texture = ExtResource("4_xgxeb")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(1287, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer"]
+position = Vector2(615, 616)
+skew = -1.07512
+texture = ExtResource("9_wi0l6")
