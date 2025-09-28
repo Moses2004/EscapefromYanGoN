@@ -1,9 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://do3bjehsmg1on"]
+[gd_scene load_steps=11 format=3 uid="uid://do3bjehsmg1on"]
 
 [ext_resource type="Texture2D" uid="uid://s5buxbce4kin" path="res://Sprites/layer1.png" id="1_sn1xx"]
 [ext_resource type="Texture2D" uid="uid://bgg0wvie086yy" path="res://Sprites/layer3.jpg" id="2_4aqey"]
 [ext_resource type="Texture2D" uid="uid://8py350sv0vg2" path="res://Sprites/yangon gp.png" id="3_ltlj5"]
 [ext_resource type="Texture2D" uid="uid://bi8242ckd5fer" path="res://Sprites/layer 2.png" id="3_xgxeb"]
+[ext_resource type="Texture2D" uid="uid://b5y02cd48t7dv" path="res://main-menu/Background.png" id="4_b4xn0"]
 [ext_resource type="Texture2D" uid="uid://dxp3exesc8pbi" path="res://Sprites/big building.png" id="4_kopta"]
 [ext_resource type="Texture2D" uid="uid://x8ue80csiwa1" path="res://Sprites/l1.png" id="4_xgxeb"]
 [ext_resource type="Texture2D" uid="uid://b3a38e56oqdts" path="res://Sprites/pagoda.png" id="5_wi0l6"]
@@ -11,14 +12,10 @@
 [ext_resource type="Texture2D" uid="uid://dt06pv8dhlv5j" path="res://Sprites/road_normal.png" id="9_wi0l6"]
 
 [node name="Background" type="ParallaxBackground"]
+visible = false
 
 [node name="bg" type="ParallaxLayer" parent="."]
 motion_mirroring = Vector2(5010, 0)
-
-[node name="Layer1" type="Sprite2D" parent="bg"]
-position = Vector2(622.5, 323)
-scale = Vector2(0.822266, 0.652344)
-texture = ExtResource("1_sn1xx")
 
 [node name="Layer2" type="Sprite2D" parent="bg"]
 position = Vector2(1890, 324)
@@ -40,6 +37,11 @@ texture = ExtResource("3_xgxeb")
 position = Vector2(5631, 324)
 scale = Vector2(0.821289, 0.661133)
 texture = ExtResource("1_sn1xx")
+
+[node name="Background" type="Sprite2D" parent="bg"]
+position = Vector2(721, 318)
+scale = Vector2(0.992703, 0.637695)
+texture = ExtResource("4_b4xn0")
 
 [node name="seperate" type="ParallaxLayer" parent="."]
 motion_mirroring = Vector2(5010, 0)

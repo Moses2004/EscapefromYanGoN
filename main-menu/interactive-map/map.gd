@@ -20,7 +20,7 @@ func _on_step2_pressed():
 
 func _on_step3_pressed():
 	click_button.play()
-	get_tree().change_scene_to_file("res://interactive-map/level_3.tscn")
+	get_tree().change_scene_to_file("res://Scenes/alert_3.tscn")
 
 func _on_step_1_button_pressed():
 	click_button.play()

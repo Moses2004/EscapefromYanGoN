@@ -34,6 +34,7 @@ position = Vector2(3367, 211)
 position = Vector2(20478, 467)
 
 [node name="Background" parent="." instance=ExtResource("4_f048m")]
+visible = true
 
 [node name="Road" parent="." instance=ExtResource("11_e7a7u")]
 

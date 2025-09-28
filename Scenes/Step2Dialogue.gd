@@ -2,7 +2,7 @@ extends Control
 
 # === Editable in Inspector ===
 @export var typing_speed := 0.035
-@export var skip_to_scene := "res://Scenes/step_2.tscn"  # 👈 go to ending after Step 2
+@export var skip_to_scene := "res://Scenes/alerttwo.tscn"  # 👈 go to ending after Step 2
 @onready var click_button: AudioStreamPlayer = $ClickButton
 
 # === Story pages for Step 2 ===

@@ -1,8 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://dad8666snqn5a"]
+[gd_scene load_steps=8 format=3 uid="uid://cjmutf8b1rju8"]
 
-[ext_resource type="Script" uid="uid://c8521v8jq8dwu" path="res://Scripts/alerttwo.gd" id="1_8vmwa"]
-[ext_resource type="Texture2D" uid="uid://bibj3krrppcp1" path="res://Sprites/button-for-starting-game-clicking-play-vector-removebg-preview.png" id="1_r8oiy"]
-[ext_resource type="FontFile" uid="uid://dhltegnxapxf5" path="res://front/Born2bSportyV2.ttf" id="2_8vmwa"]
+[ext_resource type="Script" uid="uid://bkcpto2pohasd" path="res://Scripts/alert_3.gd" id="1_evuyi"]
+[ext_resource type="Texture2D" uid="uid://bibj3krrppcp1" path="res://Sprites/button-for-starting-game-clicking-play-vector-removebg-preview.png" id="2_sthga"]
+[ext_resource type="FontFile" uid="uid://dhltegnxapxf5" path="res://front/Born2bSportyV2.ttf" id="3_j7c5d"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3xidh"]
 
@@ -36,8 +36,8 @@ shadow_color = Color(0, 0, 0, 0.203922)
 shadow_size = 5
 shadow_offset = Vector2(0, 3.41)
 
-[node name="alerttwo" type="Node2D"]
-script = ExtResource("1_8vmwa")
+[node name="alert3" type="Node2D"]
+script = ExtResource("1_evuyi")
 
 [node name="ClickButton" type="AudioStreamPlayer" parent="."]
 
@@ -55,7 +55,7 @@ offset_bottom = 623.0
 [node name="Step1" type="Sprite2D" parent="Panel"]
 position = Vector2(1027.06, 565.122)
 scale = Vector2(0.17849, 0.208316)
-texture = ExtResource("1_r8oiy")
+texture = ExtResource("2_sthga")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
 layout_mode = 1
@@ -83,13 +83,13 @@ theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_colors/font_color = Color(0.917647, 0, 0, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_8vmwa")
+theme_override_fonts/font = ExtResource("3_j7c5d")
 theme_override_font_sizes/font_size = 46
 theme_override_styles/focus = SubResource("StyleBoxEmpty_3xidh")
 theme_override_styles/hover = SubResource("StyleBoxFlat_5lcus")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_0bq8y")
 theme_override_styles/normal = SubResource("StyleBoxFlat_e3lfd")
-text = "STEP { 2 }"
+text = "STEP { 3}"
 
 [node name="Button3" type="Button" parent="Panel"]
 layout_mode = 0
@@ -102,7 +102,7 @@ theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_8vmwa")
+theme_override_fonts/font = ExtResource("3_j7c5d")
 theme_override_font_sizes/font_size = 46
 theme_override_styles/focus = SubResource("StyleBoxEmpty_3xidh")
 theme_override_styles/hover = SubResource("StyleBoxFlat_5lcus")
