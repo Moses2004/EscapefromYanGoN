@@ -7,7 +7,7 @@
 [ext_resource type="Script" uid="uid://dsxj32fbvnfo8" path="res://Scripts/player.gd" id="6_mn21r"]
 [ext_resource type="PackedScene" uid="uid://djgt233kclbg7" path="res://Scenes/road.tscn" id="7_2njt0"]
 [ext_resource type="PackedScene" uid="uid://dg86kk3rq5w1b" path="res://Scenes/hud.tscn" id="8_7ygb8"]
-[ext_resource type="AudioStream" uid="uid://c7nqwhg5v2rnp" path="res://Sound/Jeffery's Game Development/background in game music.mp3" id="9_4dgbv"]
+[ext_resource type="AudioStream" uid="uid://c7nqwhg5v2rnp" path="res://main-menu/Jeffery's Game Development/background in game music.mp3" id="9_4dgbv"]
 [ext_resource type="PackedScene" uid="uid://ftqm3jktrko2" path="res://Scenes/coin.tscn" id="10_hed8b"]
 [ext_resource type="PackedScene" uid="uid://cemkriaggs1ki" path="res://Scenes/Level2Background.tscn" id="11_8kgkc"]
 [ext_resource type="PackedScene" uid="uid://dpcx2uqd1ke15" path="res://Scenes/restart.tscn" id="11_nemde"]
@@ -31,7 +31,7 @@ position = Vector2(4036, 374)
 position = Vector2(3367, 211)
 
 [node name="Door" parent="." instance=ExtResource("3_fyhfc")]
-position = Vector2(20448, 249)
+position = Vector2(20492, 475)
 
 [node name="Player" parent="." instance=ExtResource("5_sc4r5")]
 z_index = 1
