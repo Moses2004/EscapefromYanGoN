@@ -7,7 +7,7 @@
 [ext_resource type="Script" uid="uid://dsxj32fbvnfo8" path="res://Scripts/player.gd" id="6_mn21r"]
 [ext_resource type="PackedScene" uid="uid://djgt233kclbg7" path="res://Scenes/road.tscn" id="7_2njt0"]
 [ext_resource type="PackedScene" uid="uid://dg86kk3rq5w1b" path="res://Scenes/hud.tscn" id="8_7ygb8"]
-[ext_resource type="AudioStream" uid="uid://c7nqwhg5v2rnp" path="res://main-menu/Jeffery's Game Development/background in game music.mp3" id="9_4dgbv"]
+[ext_resource type="AudioStream" uid="uid://c7nqwhg5v2rnp" path="res://Sound/Jeffery's Game Development/background in game music.mp3" id="9_4dgbv"]
 [ext_resource type="PackedScene" uid="uid://ftqm3jktrko2" path="res://Scenes/coin.tscn" id="10_hed8b"]
 [ext_resource type="PackedScene" uid="uid://cemkriaggs1ki" path="res://Scenes/Level2Background.tscn" id="11_8kgkc"]
 [ext_resource type="PackedScene" uid="uid://dpcx2uqd1ke15" path="res://Scenes/restart.tscn" id="11_nemde"]
@@ -266,3 +266,5 @@ position = Vector2(20857, -211)
 shape = SubResource("RectangleShape2D_nmnb2")
 
 [node name="ParallaxBackground" parent="." instance=ExtResource("11_8kgkc")]
+
+[connection signal="body_entered" from="Door" to="Player" method="_on_door_body_entered"]

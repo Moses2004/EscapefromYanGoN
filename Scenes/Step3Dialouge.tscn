@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://3jyv06cucilx"]
 
-[ext_resource type="Script" uid="uid://bkq1bbwiad7sl" path="res://EndingDialogue.gd" id="1_upukd"]
-[ext_resource type="FontFile" uid="uid://dhltegnxapxf5" path="res://front/Born2bSportyV2.ttf" id="2_prh8o"]
-[ext_resource type="AudioStream" uid="uid://co5thnmp4vadf" path="res://Sound/Jeffery's Game Development/Button click.mp3" id="3_wrrb7"]
+[ext_resource type="Script" uid="uid://bkq1bbwiad7sl" path="res://EndingDialogue.gd" id="1_qohlj"]
+[ext_resource type="FontFile" uid="uid://dhltegnxapxf5" path="res://front/Born2bSportyV2.ttf" id="2_b01rh"]
+[ext_resource type="AudioStream" uid="uid://co5thnmp4vadf" path="res://Sound/Jeffery's Game Development/Button click.mp3" id="3_yrs1t"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qb4wh"]
 bg_color = Color(0.168627, 0.168627, 0.168627, 1)
@@ -10,12 +10,12 @@ bg_color = Color(0.168627, 0.168627, 0.168627, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7oqqq"]
 bg_color = Color(0.169245, 0.169245, 0.169245, 1)
 
-[node name="EndingDialogue" type="Control"]
+[node name="Step3Daialouge" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
-script = ExtResource("1_upukd")
+script = ExtResource("1_qohlj")
 
 [node name="Background" type="ColorRect" parent="."]
 layout_mode = 1
@@ -53,9 +53,9 @@ offset_right = 71.5
 offset_bottom = 21.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_fonts/font = ExtResource("2_prh8o")
+theme_override_fonts/font = ExtResource("2_b01rh")
 theme_override_font_sizes/font_size = 100
-text = "The End!"
+text = "Step 3"
 horizontal_alignment = 1
 
 [node name="DialogPanel" type="Panel" parent="."]
@@ -84,7 +84,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="dialog_label" type="Label" parent="DialogPanel/VBoxContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("2_prh8o")
+theme_override_fonts/font = ExtResource("2_b01rh")
 theme_override_font_sizes/font_size = 30
 autowrap_mode = 3
 
@@ -101,13 +101,13 @@ theme_override_constants/separation = 900
 
 [node name="next_button" type="Button" parent="button_row"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("2_prh8o")
+theme_override_fonts/font = ExtResource("2_b01rh")
 theme_override_font_sizes/font_size = 50
 text = "Next"
 
 [node name="skip_button" type="Button" parent="button_row"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("2_prh8o")
+theme_override_fonts/font = ExtResource("2_b01rh")
 theme_override_font_sizes/font_size = 50
 text = "Skip"
 
@@ -117,4 +117,4 @@ offset_bottom = 8.0
 color = Color(0, 0, 0, 0.00392157)
 
 [node name="ClickButton" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("3_wrrb7")
+stream = ExtResource("3_yrs1t")

@@ -2,17 +2,12 @@ extends Control
 
 # === Editable in Inspector ===
 @export var typing_speed := 0.035
-@export var skip_to_scene := "res://Scenes/alert_3.tscn"  # 👈 go to ending after Step 2
+@export var skip_to_scene := "res://main-menu/main_menu.tscn"  # 👈 go to ending after Step 2
 @onready var click_button: AudioStreamPlayer = $ClickButton
 
 # === Story pages for Step 2 ===
 @export var dialog_pages := [
-	"After fighting through endless hordes of zombies in Yangon...",
-	"At last he reaches the last checkpoint, the city falling behind him.",
-	"He calls, he listens — every sound holds hope and fear.",
-	"Then, in the rubble, he sees them: his family, alive and trembling.",
-	"They run to one another and hold on — the hunt is over. They are together.",
-	"Congraculation! You did it."
+	"Be Happy with your family"
 ]
 
 # === Internal state ===
