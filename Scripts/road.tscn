@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://dt06pv8dhlv5j" path="res://Sprites/road_normal.png" id="1_s5bdx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s5bdx"]
-size = Vector2(32925, 188)
+size = Vector2(44489, 188)
 
 [node name="Road" type="StaticBody2D"]
 position = Vector2(37, -2)
@@ -21,5 +21,5 @@ texture = ExtResource("1_s5bdx")
 centered = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(461.5, 713)
+position = Vector2(6243.5, 713)
 shape = SubResource("RectangleShape2D_s5bdx")

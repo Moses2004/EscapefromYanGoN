@@ -66,9 +66,9 @@ texture = ExtResource("6_vucie")
 [node name="Road" parent="." instance=ExtResource("7_ebp6c")]
 
 [node name="ParallaxLayer7" type="ParallaxLayer" parent="."]
-motion_mirroring = Vector2(1287, 0)
+motion_mirroring = Vector2(1800, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer7"]
-position = Vector2(117, 433)
-skew = -1.07512
+position = Vector2(294, 411)
+skew = -1.06465
 texture = ExtResource("8_wdfsk")
