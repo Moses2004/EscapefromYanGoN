@@ -5,6 +5,10 @@ extends CharacterBody2D
 
 const GRAVITY = 1700
 const SPEED = 650
+const JUMP_FORCE = -650
+
+var jump_count = 0
+var max_jumps = 2  # 1 = single jump, 2 = double jump
 
 var key = false
 signal dooropen
@@ -23,14 +27,19 @@ func _physics_process(delta):
 	move_and_slide()
 	player_animations()
 
+# --- Gravity + reset jump ---
 func player_falling(delta):
 	if !is_on_floor():
 		velocity.y += GRAVITY * delta
+	else:
+		jump_count = 0  # ✅ Reset jump when landing
 
+# --- Idle ---
 func player_idle(_delta):
-	if is_on_floor():
+	if is_on_floor() and velocity.x == 0:
 		current_state = State.Idle
 
+# --- Run ---
 func player_run(_delta):
 	var direction = Input.get_axis("left", "right")
 	if direction:
@@ -40,22 +49,24 @@ func player_run(_delta):
 
 	if direction != 0:
 		current_state = State.Run
-		animated_sprite_2d.flip_h = false if direction > 0 else true
+		animated_sprite_2d.flip_h = direction < 0
 
+# --- Jump (single or double) ---
 func player_jump(delta):
-	if Input.is_action_just_pressed("jump"):
+	if Input.is_action_just_pressed("jump") and jump_count < max_jumps:
 		sfx_jump.play()
-		velocity.y = -1000
+		velocity.y = JUMP_FORCE
 		current_state = State.Jump
-	if !is_on_floor() and current_state == State.Jump:
-		var direction = Input.get_axis("left", "right")
-		velocity.x += direction * 100 * delta
-		
+		jump_count += 1  # ✅ Count jumps
+
+# --- Animations ---
 func player_animations():
 	if current_state == State.Idle:
 		animated_sprite_2d.play("idle")
 	elif current_state == State.Run:
 		animated_sprite_2d.play("run")
+	elif current_state == State.Jump:
+		animated_sprite_2d.play("jump")
 
 # --- Key pickup ---
 func _on_key_body_entered(body: Node2D) -> void:
@@ -63,7 +74,7 @@ func _on_key_body_entered(body: Node2D) -> void:
 		GameManager.key += 1
 		body.queue_free()
 
-# --- Door logic (Step2 -> Step3) ---
+# --- Door logic 
 func _on_door_body_entered(body: Node2D) -> void:
 	if GameManager.key >= 3:  # Require 3 keys
 		emit_signal("dooropen")
@@ -76,7 +87,7 @@ func _on_door_body_entered(body: Node2D) -> void:
 			get_tree().change_scene_to_file("res://Scenes/Step2Dialogue.tscn")
 		elif current_scene.ends_with("res://Scenes/step_2.tscn"):
 			get_tree().change_scene_to_file("res://Scenes/Step3Dialouge.tscn")
-		elif current_scene.ends_with("res://Scenes/step_3.tscn     "):
+		elif current_scene.ends_with("res://Scenes/step_3.tscn"):
 			get_tree().change_scene_to_file("res://Scenes/the_ending.tscn")
 		else:
 			print("⚠️ No matching next step for: ", current_scene)
