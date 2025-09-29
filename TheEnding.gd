@@ -7,8 +7,17 @@ extends Control
 
 # === Story pages for Step 2 ===
 @export var dialog_pages := [
-	"Be Happy with your family"
+	"After countless battles, Yangon finally grows silent.",
+	"My strength is almost gone... yet my heart is full.",
+	"Through the smoke and ruins... I see them.",
+	"My family. Alive. Waiting for me.",
+	"Tears fall, but they are tears of joy.",
+	"We are together again... no more fear, no more running.",
+	"The nightmare is over.",
+	"The End. Be happy with your family — a new life begins."
 ]
+
+
 
 # === Internal state ===
 var current_page := 0

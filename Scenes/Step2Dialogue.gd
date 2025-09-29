@@ -7,12 +7,14 @@ extends Control
 
 # === Story pages for Step 2 ===
 @export var dialog_pages := [
-	"After countless battles, Yangon feels like a graveyard.",
-	"My strength is fading... but my hope is not gone yet.",
-	"Tonight, I heard voices... familiar ones.",
-	"Could it be? Is my family still alive in this chaos?",
-	"I must push forward. Just one more step..."
+	"The deeper I go into the city, the more dangerous it becomes.",
+	"Every street corner hides shadows... and eyes watching me.",
+	"I remember my family’s favorite spot — maybe they hid there when chaos began.",
+	"Hope is fragile, but it’s the only thing that drives me forward.",
+	"I cannot stop now. Not when they might still be alive."
 ]
+
+
 
 # === Internal state ===
 var current_page := 0

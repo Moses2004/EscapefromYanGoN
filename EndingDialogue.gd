@@ -7,12 +7,11 @@ extends Control
 
 # === Story pages for Step 2 ===
 @export var dialog_pages := [
-	"After fighting through endless hordes of zombies in Yangon...",
-	"At last he reaches the last checkpoint, the city falling behind him.",
-	"He calls, he listens — every sound holds hope and fear.",
-	"Then, in the rubble, he sees them: his family, alive and trembling.",
-	"They run to one another and hold on — the hunt is over. They are together.",
-	"Congraculation! You did it."
+	"Blood stains the walls. The air smells of death and smoke.",
+	"My hands shake, but I grip my weapon tighter.",
+	"Every step I take feels heavier, but my heart beats louder.",
+	"I can almost feel their presence... as if they’re just beyond the next door.",
+	"This is it. One last fight before I learn the truth."
 ]
 
 # === Internal state ===
