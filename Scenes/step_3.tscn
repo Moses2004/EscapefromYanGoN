@@ -7,7 +7,7 @@
 [ext_resource type="Script" uid="uid://dsxj32fbvnfo8" path="res://Scripts/player.gd" id="4_wtnje"]
 [ext_resource type="PackedScene" uid="uid://b00e6jse0xnt0" path="res://Scripts/road.tscn" id="5_wtnje"]
 [ext_resource type="PackedScene" uid="uid://dg86kk3rq5w1b" path="res://Scenes/hud.tscn" id="6_gyawx"]
-[ext_resource type="AudioStream" uid="uid://c7nqwhg5v2rnp" path="res://main-menu/Jeffery's Game Development/background in game music.mp3" id="7_337ic"]
+[ext_resource type="AudioStream" uid="uid://c7nqwhg5v2rnp" path="res://Sound/Jeffery's Game Development/background in game music.mp3" id="7_337ic"]
 [ext_resource type="PackedScene" uid="uid://ftqm3jktrko2" path="res://Scenes/coin.tscn" id="8_mojb6"]
 [ext_resource type="PackedScene" uid="uid://dpcx2uqd1ke15" path="res://Scenes/restart.tscn" id="9_ub0oq"]
 [ext_resource type="PackedScene" uid="uid://de87wffsqgipe" path="res://Scenes/Level3background.tscn" id="10_a4u8v"]

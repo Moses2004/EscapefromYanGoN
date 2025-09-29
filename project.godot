@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="escape_from_ygn"
-run/main_scene="uid://bctwc2iagbasi"
+run/main_scene="uid://df334s5srugt5"
 config/features=PackedStringArray("4.4", "Mobile")
 config/icon="res://icon.svg"
 
